@@ -7,97 +7,107 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/Programs/altera/13.0sp1/HW/DigitalLife
+Z0 dD:/Programs/altera/13.0sp1/HW/DigitalLife
 T_opt
-!s110 1584544817
-VM[=8FM>9<a5^Ki_]7SW451
+!s110 1584546490
+V]OS6CAnRKn02R=CgT]jYQ2
 04 14 5 work digitallife_tb bench 1
-=1-38378bef532a-5e723c31-14c-27ac
+=1-38378bef532a-5e7242ba-19b-2c20
 o-quiet -auto_acc_if_foreign -work work +acc
-tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
-OL;O;10.7;67
+Z2 OL;O;10.7;67
+T_opt1
+!s110 1584546480
+Vn]7_7k>5ke]EeWAld@SJZ1
+04 11 3 work digitallife bhv 1
+=1-38378bef532a-5e7242af-3d9-5eac
+o-quiet -auto_acc_if_foreign -work work
+R1
+n@_opt1
+R2
+R0
 Edigitallife
-Z0 w1584544756
-Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z5 dD:/Programs/altera/13.0sp1/HW/DigitalLife/ModelSimTestBenchForDigitalLife
-Z6 8D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd
-Z7 FD:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd
+Z3 w1584545200
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 dD:/Programs/altera/13.0sp1/HW/DigitalLife/ModelSimTestBenchForDigitalLife
+Z9 8D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd
+Z10 FD:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd
 l0
 L6
 VTa`FF<UVWKV>QaIHFCiU]2
 !s100 272d>cmT:b>iYW>R=2dWM0
-Z8 OL;C;10.7;67
+Z11 OL;C;10.7;67
 32
-Z9 !s110 1584544807
+Z12 !s110 1584546455
 !i10b 1
-Z10 !s108 1584544807.000000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd|
-Z12 !s107 D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd|
+Z13 !s108 1584546455.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd|
+Z15 !s107 D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd|
 !i113 0
-Z13 o-work work -2002 -explicit
-Z14 tExplicit 1 CvgOpt 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
 Abhv
-R1
-R2
-R3
 R4
+R5
+R6
+R7
 DEx4 work 11 digitallife 0 22 Ta`FF<UVWKV>QaIHFCiU]2
 l25
 L20
-VG1ZR0WmYFSiUVnZX:iojV2
-!s100 <CT=:I7f;OhnQU?67=a]l3
-R8
-32
-R9
-!i10b 1
-R10
+VU_EP`aN`iZmI]Xk`ghG?F1
+!s100 k<1Vkc:fZAXIYi`ZFJ3aS0
 R11
+32
 R12
-!i113 0
+!i10b 1
 R13
 R14
+R15
+!i113 0
+R16
+R17
 Edigitallife_tb
-Z15 w1584543270
-Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R3
-R4
-R5
-Z17 8D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd
-Z18 FD:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd
+Z18 w1584543270
+Z19 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R6
+R7
+R8
+Z20 8D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd
+Z21 FD:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd
 l0
 L10
 Vi8ze1L=KUOD1i6e1>izZ<3
 !s100 c6EoV:J]W0_8;8jQ5=[lM0
-R8
+R11
 32
-Z19 !s110 1584544808
+R12
 !i10b 1
-R10
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd|
-Z21 !s107 D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd|
-!i113 0
 R13
-R14
-Abench
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd|
+Z23 !s107 D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd|
+!i113 0
 R16
-R3
-R4
+R17
+Abench
+R19
+R6
+R7
 DEx4 work 14 digitallife_tb 0 22 i8ze1L=KUOD1i6e1>izZ<3
 l36
 L13
 VjoT;;UDfzeXk1bSclmhTN3
 !s100 CcX46VcS;UQ8M<=aZHYml1
-R8
+R11
 32
-R19
+R12
 !i10b 1
-R10
-R20
-R21
-!i113 0
 R13
-R14
+R22
+R23
+!i113 0
+R16
+R17

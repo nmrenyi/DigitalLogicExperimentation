@@ -1,0 +1,7 @@
+|TEF
+EN => temp_q.ENA
+T => temp_q.OUTPUTSELECT
+CLK => temp_q.CLK
+Q <= temp_q.DB_MAX_OUTPUT_PORT_TYPE
+
+

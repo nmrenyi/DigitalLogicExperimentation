@@ -28,8 +28,9 @@ begin
             natural_seq <= "0000";
             odd_seq <= "0001";
             even_seq <= "0000";
+
         elsif (clk'event and clk = '1') then  -- the clock signal is on the rising edge
-            if (natural_seq = 9) then   -- natural number has reached the maximum value
+            if (natural_seq = 15) then   -- natural number has reached the maximum value
                 natural_seq <= (others => '0'); -- reset it to 0
             else
                 natural_seq <= natural_seq + 1; -- stride is 1, to the next even number
@@ -46,6 +47,8 @@ begin
             else
                 even_seq <= even_seq + 2; -- stride is 2, to the next even number
             end if;
+        else
+            null;
         end if;
 
         -- giving value to the outputs
@@ -53,6 +56,7 @@ begin
         odd_out <= odd_seq;
         even_out<=even_seq;
         natural_out_test<=natural_seq;
+
         case natural_seq is -- encode the natural seqence to light the LEDS
             when"0000"=> natural_out<="1111110"; --0
             when"0001"=> natural_out<="0110000"; --1

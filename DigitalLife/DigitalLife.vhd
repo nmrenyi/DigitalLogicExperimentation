@@ -29,7 +29,7 @@ begin
             odd_seq <= "0001";
             even_seq <= "0000";
 
-        elsif (clk'event and clk = '1') then  -- the clock signal is on the rising edge
+        elsif (rising_edge(clk)) then  -- the clock signal is on the rising edge
             if (natural_seq = 15) then   -- natural number has reached the maximum value
                 natural_seq <= (others => '0'); -- reset it to 0
             else

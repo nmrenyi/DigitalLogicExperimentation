@@ -1,0 +1,46 @@
+|DigitalLife
+rst => even_seq[0].ACLR
+rst => even_seq[1].ACLR
+rst => even_seq[2].ACLR
+rst => even_seq[3].ACLR
+rst => odd_seq[0].PRESET
+rst => odd_seq[1].ACLR
+rst => odd_seq[2].ACLR
+rst => odd_seq[3].ACLR
+rst => natural_seq[0].ACLR
+rst => natural_seq[1].ACLR
+rst => natural_seq[2].ACLR
+rst => natural_seq[3].ACLR
+clk => even_seq[0].CLK
+clk => even_seq[1].CLK
+clk => even_seq[2].CLK
+clk => even_seq[3].CLK
+clk => odd_seq[0].CLK
+clk => odd_seq[1].CLK
+clk => odd_seq[2].CLK
+clk => odd_seq[3].CLK
+clk => natural_seq[0].CLK
+clk => natural_seq[1].CLK
+clk => natural_seq[2].CLK
+clk => natural_seq[3].CLK
+natural_out_test[0] <= natural_seq[0].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test[1] <= natural_seq[1].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test[2] <= natural_seq[2].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test[3] <= natural_seq[3].DB_MAX_OUTPUT_PORT_TYPE
+natural_out[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+natural_out[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+odd_out[0] <= odd_seq[0].DB_MAX_OUTPUT_PORT_TYPE
+odd_out[1] <= odd_seq[1].DB_MAX_OUTPUT_PORT_TYPE
+odd_out[2] <= odd_seq[2].DB_MAX_OUTPUT_PORT_TYPE
+odd_out[3] <= odd_seq[3].DB_MAX_OUTPUT_PORT_TYPE
+even_out[0] <= even_seq[0].DB_MAX_OUTPUT_PORT_TYPE
+even_out[1] <= even_seq[1].DB_MAX_OUTPUT_PORT_TYPE
+even_out[2] <= even_seq[2].DB_MAX_OUTPUT_PORT_TYPE
+even_out[3] <= even_seq[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

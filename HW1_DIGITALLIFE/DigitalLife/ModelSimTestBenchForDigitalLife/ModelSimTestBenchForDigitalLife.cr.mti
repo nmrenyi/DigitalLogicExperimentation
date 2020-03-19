@@ -1,4 +1,4 @@
-D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {D:\Programs\altera\13.0sp1\HW\DigitalLife\DigitalLife.vhd}
+D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd
 Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -8,7 +8,7 @@ Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
 -- Compiling entity DigitalLife
 -- Compiling architecture bhv of DigitalLife
 
-} {} {}} D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife_tb.vhd
+} {} {}} D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd
 Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO

@@ -11,6 +11,7 @@ architecture bench of DigitalLife_tb is
       port (
           reset:in std_logic := '0';
           clock:in std_logic := '0';
+          natural_out_hex: out std_logic_vector(3 downto 0) := "0000";
           natural_out:out std_logic_vector(3 downto 0) := "0000";
           even_out:out std_logic_vector(3 downto 0) := "0000";
           odd_out:out std_logic_vector(3 downto 0) := "0001";
@@ -22,6 +23,7 @@ architecture bench of DigitalLife_tb is
 
   signal reset: std_logic := '0';
   signal clock: std_logic := '0';
+  signal natural_out_hex: std_logic_vector(3 downto 0) := "0000";
   signal natural_out: std_logic_vector(3 downto 0) := "0000";
   signal even_out: std_logic_vector(3 downto 0) := "0000";
   signal odd_out: std_logic_vector(3 downto 0) := "0001";
@@ -36,6 +38,7 @@ begin
 
   uut: DigitalLife port map ( reset               => reset,
                               clock               => clock,
+                              natural_out_hex     => natural_out_hex,
                               natural_out         => natural_out,
                               even_out            => even_out,
                               odd_out             => odd_out,
@@ -43,6 +46,7 @@ begin
                               even_out_encoded    => even_out_encoded,
                               odd_out_encoded     => odd_out_encoded );
 
+  reset <= '0', '1' after 50 ns, '0' after 100 ns;
 
   clocking: process
   begin

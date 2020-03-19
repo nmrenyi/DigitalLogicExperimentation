@@ -23,5 +23,5 @@
 # Loading work.DigitalLife_vlg_sample_tst
 # Loading work.DigitalLife_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : DigitalLife.vt(497)
+# ** Note: $finish    : DigitalLife.vt(845)
 #    Time: 1 us  Iteration: 0  Instance: /DigitalLife_vlg_vec_tst/tb_out

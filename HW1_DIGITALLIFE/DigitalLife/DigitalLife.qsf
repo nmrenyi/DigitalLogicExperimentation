@@ -57,4 +57,5 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_s
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE DigitalLife_tb.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Programs/altera/13.0sp1/HW/DigitalLife/Waveform.vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../DigitalLifeWaveform.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLifeWaveform.vwf"

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DigitalLife
-Wed Mar 18 22:39:04 2020
+Thu Mar 19 17:49:29 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +42,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Mar 18 22:39:04 2020           ;
+; Analysis & Synthesis Status ; Successful - Thu Mar 19 17:49:28 2020           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; DigitalLife                                     ;
 ; Top-level Entity Name       ; DigitalLife                                     ;
 ; Family                      ; MAX II                                          ;
-; Total logic elements        ; 14                                              ;
-; Total pins                  ; 21                                              ;
+; Total logic elements        ; 130                                             ;
+; Total pins                  ; 39                                              ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
 +-----------------------------+-------------------------------------------------+
@@ -137,47 +138,48 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; DigitalLife.vhd                  ; yes             ; User VHDL File  ; D:/Programs/altera/13.0sp1/HW/DigitalLife/DigitalLife.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; DigitalLife.vhd                  ; yes             ; User VHDL File  ; D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Total logic elements                        ; 14             ;
-;     -- Combinational with no register       ; 7              ;
-;     -- Register only                        ; 0              ;
-;     -- Combinational with a register        ; 7              ;
-;                                             ;                ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 8              ;
-;     -- 3 input functions                    ; 3              ;
-;     -- 2 input functions                    ; 2              ;
-;     -- 1 input functions                    ; 1              ;
-;     -- 0 input functions                    ; 0              ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 14             ;
-;     -- arithmetic mode                      ; 0              ;
-;     -- qfbk mode                            ; 0              ;
-;     -- register cascade mode                ; 0              ;
-;     -- synchronous clear/load mode          ; 0              ;
-;     -- asynchronous clear/load mode         ; 7              ;
-;                                             ;                ;
-; Total registers                             ; 7              ;
-; I/O pins                                    ; 21             ;
-; Maximum fan-out node                        ; natural_seq[0] ;
-; Maximum fan-out                             ; 12             ;
-; Total fan-out                               ; 77             ;
-; Average fan-out                             ; 2.20           ;
-+---------------------------------------------+----------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 130   ;
+;     -- Combinational with no register       ; 54    ;
+;     -- Register only                        ; 49    ;
+;     -- Combinational with a register        ; 27    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 22    ;
+;     -- 3 input functions                    ; 10    ;
+;     -- 2 input functions                    ; 35    ;
+;     -- 1 input functions                    ; 14    ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 99    ;
+;     -- arithmetic mode                      ; 31    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 76    ;
+;                                             ;       ;
+; Total registers                             ; 76    ;
+; Total logic cells in carry chains           ; 32    ;
+; I/O pins                                    ; 39    ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 76    ;
+; Total fan-out                               ; 477   ;
+; Average fan-out                             ; 2.82  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -185,7 +187,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |DigitalLife               ; 14 (14)     ; 7            ; 0          ; 21   ; 0            ; 7 (7)        ; 0 (0)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |DigitalLife        ; work         ;
+; |DigitalLife               ; 130 (130)   ; 76           ; 0          ; 39   ; 0            ; 54 (54)      ; 49 (49)           ; 27 (27)          ; 32 (32)         ; 0 (0)      ; |DigitalLife        ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -195,13 +197,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; even_seq[0]                           ; Stuck at GND due to stuck port data_in ;
+; odd_out_encoded[2]~reg0               ; Stuck at GND due to stuck port data_in ;
 ; odd_seq[0]                            ; Stuck at VCC due to stuck port data_in ;
+; even_seq[0]                           ; Stuck at GND due to stuck port data_in ;
+; even_out[0]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; odd_out[0]~reg0                       ; Stuck at VCC due to stuck port data_in ;
+; natural_seq[0]                        ; Merged with natural_seq_hex[0]         ;
 ; odd_seq[1]                            ; Merged with even_seq[1]                ;
 ; odd_seq[2]                            ; Merged with even_seq[2]                ;
 ; odd_seq[3]                            ; Merged with even_seq[3]                ;
-; Total Number of Removed Registers = 5 ;                                        ;
+; Total Number of Removed Registers = 9 ;                                        ;
 +---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; odd_seq[0]    ; Stuck at VCC              ; odd_out[0]~reg0                        ;
+;               ; due to stuck port data_in ;                                        ;
+; even_seq[0]   ; Stuck at GND              ; even_out[0]~reg0                       ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -209,12 +227,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 76    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Asynchronous Clear ; 62    ;
+; Number of registers using Asynchronous Load  ; 14    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -225,7 +243,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 18 22:39:03 2020
+    Info: Processing started: Thu Mar 19 17:49:26 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DigitalLife -c DigitalLife
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file digitallife.vhd
@@ -235,21 +253,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file digital
     Info (12022): Found design unit 1: DigitalLife_tb-bench
     Info (12023): Found entity 1: DigitalLife_tb
 Info (12127): Elaborating entity "DigitalLife" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at DigitalLife.vhd(53): signal "odd_seq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at DigitalLife.vhd(54): signal "even_seq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at DigitalLife.vhd(55): signal "natural_seq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at DigitalLife.vhd(56): signal "natural_seq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "odd_out[0]" is stuck at VCC
     Warning (13410): Pin "even_out[0]" is stuck at GND
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "odd_out[0]" is stuck at VCC
+    Warning (13410): Pin "odd_out_encoded[2]" is stuck at GND
+Info (21057): Implemented 169 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4623 megabytes
-    Info: Processing ended: Wed Mar 18 22:39:04 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 130 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Thu Mar 19 17:49:29 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

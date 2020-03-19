@@ -11,6 +11,7 @@ entity DigitalLife is
         clock:in std_logic := '0';  -- clock
 
         -- output ports
+        natural_out_hex: out std_logic_vector(3 downto 0) := "0000";
         natural_out:out std_logic_vector(3 downto 0) := "0000";  -- natural number binary sequence output
         even_out:out std_logic_vector(3 downto 0) := "0000";  -- even number binary sequence output
         odd_out:out std_logic_vector(3 downto 0) := "0001";  -- odd number binary sequence output
@@ -36,9 +37,16 @@ begin
             natural_seq_hex <= "0000";
             odd_seq <= "0001";
             even_seq <= "0000";
+        natural_out <= "0000";
+        natural_out_hex <= "0000";
+	    even_out <= "0000";
+	    odd_out <= "0001";
+	    natural_out_encoded <="1111110";
+ 	    even_out_encoded <="1111110";
+            odd_out_encoded <="0110000";
             clock_cycle <= (others => '0');
         elsif (rising_edge(clock)) then  -- the clock signal is on the rising edge
-            if clock_cycle = 1 then
+            if clock_cycle = 0 then
                 if (natural_seq_hex = 15) then   -- natural number has reached the maximum value
                     natural_seq_hex <= (others => '0'); -- reset it to 0
                 else
@@ -65,7 +73,7 @@ begin
                 odd_out <= odd_seq;
                 even_out<=even_seq;
                 natural_out<=natural_seq;
-        
+                natural_out_hex <= natural_seq_hex;
                 case natural_seq_hex is -- encode the natural seqence to light the LEDS
                     when"0000"=> natural_out_encoded<="1111110"; --0
                     when"0001"=> natural_out_encoded<="0110000"; --1
@@ -115,7 +123,5 @@ begin
 
    end process;
 
-   --odd_out <= odd_seq;
-   --even_out<=even_seq;
-   --natural_out<=natural_seq;
+
 end architecture bhv;

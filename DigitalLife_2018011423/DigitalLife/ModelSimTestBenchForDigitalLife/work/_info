@@ -1,0 +1,113 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Programs/altera/13.0sp1/HW/DigitalLife
+T_opt
+!s110 1584603691
+V??4mMF7=W9NNA6ea5^a;k0
+04 14 5 work digitallife_tb bench 1
+=1-38378bef532a-5e73222b-74-142c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+Z2 OL;O;10.7;67
+T_opt1
+!s110 1584591009
+VWLeTJGjg7H_8cnHK0J2`?2
+04 11 3 work digitallife bhv 1
+=1-38378bef532a-5e72f0a0-39c-307c
+o-quiet -auto_acc_if_foreign -work work
+R1
+n@_opt1
+R2
+R0
+Edigitallife
+Z3 w1584603652
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 dD:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/ModelSimTestBenchForDigitalLife
+Z9 8D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd
+Z10 FD:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd
+l0
+L7
+VB<2RiTmU0@90LzZTU7jaj1
+!s100 FUWKSCeBISEeDc[aF:=V^3
+Z11 OL;C;10.7;67
+32
+Z12 !s110 1584603682
+!i10b 1
+Z13 !s108 1584603682.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd|
+Z15 !s107 D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife.vhd|
+!i113 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
+Abhv
+R4
+R5
+R6
+R7
+DEx4 work 11 digitallife 0 22 B<2RiTmU0@90LzZTU7jaj1
+l33
+L26
+VXHaNo_3jLNW1hY<H_OT[;3
+!s100 Gnc@oB8AX9P3UMPKh4Hhl2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Edigitallife_tb
+Z18 w1584603680
+Z19 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R6
+R7
+R8
+Z20 8D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd
+Z21 FD:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd
+l0
+L5
+Vj?M3<8BXhd5O:`dg9U=9V3
+!s100 An[dMPQSRh3_5][k8A]fZ3
+R11
+32
+R12
+!i10b 1
+R13
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd|
+Z23 !s107 D:/Programs/altera/13.0sp1/HW/HW1_DIGITALLIFE/DigitalLife/DigitalLife_tb.vhd|
+!i113 0
+R16
+R17
+Abench
+R19
+R6
+R7
+DEx4 work 14 digitallife_tb 0 22 j?M3<8BXhd5O:`dg9U=9V3
+l37
+L8
+VE6ad9BP;h1d1V17>l6N?73
+!s100 [??ZUh;PHB9:Z;AF;TBc10
+R11
+32
+R12
+!i10b 1
+R13
+R22
+R23
+!i113 0
+R16
+R17

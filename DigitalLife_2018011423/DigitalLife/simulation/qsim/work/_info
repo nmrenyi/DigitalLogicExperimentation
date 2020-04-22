@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Programs\altera\13.0sp1\DigitalLife\simulation\qsim
+vDigitalLife
+Z1 I;^enS2XK@IPE?4SERO3?=1
+Z2 VOi5Vn`hD6X[USdH=jFOX@1
+Z3 dD:\Programs\altera\13.0sp1\HW\HW1_DIGITALLIFE\DigitalLife\simulation\qsim
+Z4 w1584611437
+Z5 8DigitalLife.vo
+Z6 FDigitalLife.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|DigitalLife.vo|
+Z9 o-work work -O0
+Z10 n@digital@life
+!i10b 1
+Z11 !s100 Sm`fV0G]KYfJ@9_hSCDPO3
+!s85 0
+Z12 !s108 1584611439.322000
+Z13 !s107 DigitalLife.vo|
+!s101 -O0
+vDigitalLife_vlg_check_tst
+!i10b 1
+!s100 ;4zjLA9k`hzURAA@aM9Kc1
+Io?:Vd=Vz`DUkNLLQJ`caT1
+VHi4m4>X0m_Ygk9?T;bHi;0
+R3
+Z14 w1584611436
+Z15 8DigitalLife.vt
+Z16 FDigitalLife.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1584611439.499000
+Z18 !s107 DigitalLife.vt|
+Z19 !s90 -work|work|DigitalLife.vt|
+!s101 -O0
+R9
+Z20 n@digital@life_vlg_check_tst
+vDigitalLife_vlg_sample_tst
+!i10b 1
+!s100 zF2Wdn3PcGQ1Id@eRM=9n0
+I5enfC:O0Ad5<b<A0OYeFS0
+VeBh]VX;L31fWoS8f4A0B;1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z21 n@digital@life_vlg_sample_tst
+vDigitalLife_vlg_vec_tst
+!i10b 1
+!s100 8kiJ_L5Ng?5061UMnUieG2
+IA[MJbO3E>[mjTPfO[XnYU0
+Z22 V9RL0]Tn1@a4J_k?]nD>VG1
+R3
+R14
+R15
+R16
+L0 849
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z23 n@digital@life_vlg_vec_tst

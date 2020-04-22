@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  19 MAR 2020 17:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.30)  25 MAR 2020 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -738,8 +738,9 @@ Overfull \hbox (145.41919pt too wide) in paragraph at lines 286--287
 [][][][][] [] [] [] [][][][][][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
  []
 
+[5]
 No file lab_report_1.bbl.
-[5] (./lab_report_1.aux)
+[6] (./lab_report_1.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -754,4 +755,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  54i,8n,68p,678b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on lab_report_1.pdf (5 pages).
+Output written on lab_report_1.pdf (6 pages).

@@ -1,0 +1,121 @@
+|Serial4FullAdder
+a_in[0] => FullAdder:u1.ain
+a_in[1] => FullAdder:u2.ain
+a_in[2] => FullAdder:u3.ain
+a_in[3] => FullAdder:u4.ain
+b_in[0] => FullAdder:u1.bin
+b_in[1] => FullAdder:u2.bin
+b_in[2] => FullAdder:u3.bin
+b_in[3] => FullAdder:u4.bin
+carry_in => FullAdder:u1.cin
+sum_out[0] <= FullAdder:u1.sum
+sum_out[1] <= FullAdder:u2.sum
+sum_out[2] <= FullAdder:u3.sum
+sum_out[3] <= FullAdder:u4.sum
+carry_out <= FullAdder:u4.cout
+
+
+|Serial4FullAdder|FullAdder:u1
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|Serial4FullAdder|FullAdder:u1|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u1|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u2
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|Serial4FullAdder|FullAdder:u2|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u2|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u3
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|Serial4FullAdder|FullAdder:u3|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u3|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u4
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|Serial4FullAdder|FullAdder:u4|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Serial4FullAdder|FullAdder:u4|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+

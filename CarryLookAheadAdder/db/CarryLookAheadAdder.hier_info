@@ -1,0 +1,138 @@
+|CarryLookAheadAdder
+a_in[0] => P[0].IN0
+a_in[0] => G[0].IN0
+a_in[0] => FullAdder:u1.ain
+a_in[1] => P[1].IN0
+a_in[1] => G[1].IN0
+a_in[1] => FullAdder:u2.ain
+a_in[2] => P[2].IN0
+a_in[2] => G[2].IN0
+a_in[2] => FullAdder:u3.ain
+a_in[3] => P[3].IN0
+a_in[3] => G[3].IN0
+a_in[3] => FullAdder:u4.ain
+b_in[0] => P[0].IN1
+b_in[0] => G[0].IN1
+b_in[0] => FullAdder:u1.bin
+b_in[1] => P[1].IN1
+b_in[1] => G[1].IN1
+b_in[1] => FullAdder:u2.bin
+b_in[2] => P[2].IN1
+b_in[2] => G[2].IN1
+b_in[2] => FullAdder:u3.bin
+b_in[3] => P[3].IN1
+b_in[3] => G[3].IN1
+b_in[3] => FullAdder:u4.bin
+carry_in => carry.IN1
+carry_in => FullAdder:u1.cin
+sum_out[0] <= FullAdder:u1.sum
+sum_out[1] <= FullAdder:u2.sum
+sum_out[2] <= FullAdder:u3.sum
+sum_out[3] <= FullAdder:u4.sum
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u1
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|CarryLookAheadAdder|FullAdder:u1|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u1|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u2
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|CarryLookAheadAdder|FullAdder:u2|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u2|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u3
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|CarryLookAheadAdder|FullAdder:u3|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u3|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u4
+ain => half_adder:u1.a
+bin => half_adder:u1.b
+cin => half_adder:u2.b
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= half_adder:u2.sum
+
+
+|CarryLookAheadAdder|FullAdder:u4|half_adder:u1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|FullAdder:u4|half_adder:u2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+

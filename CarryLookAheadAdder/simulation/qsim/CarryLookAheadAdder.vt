@@ -1,0 +1,327 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/22/2020 16:09:44"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    CarryLookAheadAdder
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module CarryLookAheadAdder_vlg_sample_tst(
+	a_in,
+	b_in,
+	carry_in,
+	sampler_tx
+);
+input [3:0] a_in;
+input [3:0] b_in;
+input  carry_in;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(a_in or b_in or carry_in)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module CarryLookAheadAdder_vlg_check_tst (
+	carry_out,
+	sum_out,
+	sampler_rx
+);
+input  carry_out;
+input [3:0] sum_out;
+input sampler_rx;
+
+reg  carry_out_expected;
+reg [3:0] sum_out_expected;
+
+reg  carry_out_prev;
+reg [3:0] sum_out_prev;
+
+reg  carry_out_expected_prev;
+reg [3:0] sum_out_expected_prev;
+
+reg  last_carry_out_exp;
+reg [3:0] last_sum_out_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	carry_out_prev = carry_out;
+	sum_out_prev = sum_out;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	carry_out_expected_prev = carry_out_expected;
+	sum_out_expected_prev = sum_out_expected;
+end
+
+
+
+// expected carry_out
+initial
+begin
+	carry_out_expected = 1'bX;
+end 
+// expected sum_out[ 3 ]
+initial
+begin
+	sum_out_expected[3] = 1'bX;
+end 
+// expected sum_out[ 2 ]
+initial
+begin
+	sum_out_expected[2] = 1'bX;
+end 
+// expected sum_out[ 1 ]
+initial
+begin
+	sum_out_expected[1] = 1'bX;
+end 
+// expected sum_out[ 0 ]
+initial
+begin
+	sum_out_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(carry_out_expected or carry_out or sum_out_expected or sum_out)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected carry_out = %b | expected sum_out = %b | ",carry_out_expected_prev,sum_out_expected_prev);
+	$display("| real carry_out = %b | real sum_out = %b | ",carry_out_prev,sum_out_prev);
+`endif
+	if (
+		( carry_out_expected_prev !== 1'bx ) && ( carry_out_prev !== carry_out_expected_prev )
+		&& ((carry_out_expected_prev !== last_carry_out_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port carry_out :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", carry_out_expected_prev);
+		$display ("     Real value = %b", carry_out_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_carry_out_exp = carry_out_expected_prev;
+	end
+	if (
+		( sum_out_expected_prev[0] !== 1'bx ) && ( sum_out_prev[0] !== sum_out_expected_prev[0] )
+		&& ((sum_out_expected_prev[0] !== last_sum_out_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sum_out[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sum_out_expected_prev);
+		$display ("     Real value = %b", sum_out_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sum_out_exp[0] = sum_out_expected_prev[0];
+	end
+	if (
+		( sum_out_expected_prev[1] !== 1'bx ) && ( sum_out_prev[1] !== sum_out_expected_prev[1] )
+		&& ((sum_out_expected_prev[1] !== last_sum_out_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sum_out[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sum_out_expected_prev);
+		$display ("     Real value = %b", sum_out_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sum_out_exp[1] = sum_out_expected_prev[1];
+	end
+	if (
+		( sum_out_expected_prev[2] !== 1'bx ) && ( sum_out_prev[2] !== sum_out_expected_prev[2] )
+		&& ((sum_out_expected_prev[2] !== last_sum_out_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sum_out[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sum_out_expected_prev);
+		$display ("     Real value = %b", sum_out_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sum_out_exp[2] = sum_out_expected_prev[2];
+	end
+	if (
+		( sum_out_expected_prev[3] !== 1'bx ) && ( sum_out_prev[3] !== sum_out_expected_prev[3] )
+		&& ((sum_out_expected_prev[3] !== last_sum_out_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sum_out[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sum_out_expected_prev);
+		$display ("     Real value = %b", sum_out_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sum_out_exp[3] = sum_out_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module CarryLookAheadAdder_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] a_in;
+reg [3:0] b_in;
+reg carry_in;
+// wires                                               
+wire carry_out;
+wire [3:0] sum_out;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+CarryLookAheadAdder i1 (
+// port map - connection between master ports and signals/registers   
+	.a_in(a_in),
+	.b_in(b_in),
+	.carry_in(carry_in),
+	.carry_out(carry_out),
+	.sum_out(sum_out)
+);
+// a_in[ 3 ]
+initial
+begin
+	a_in[3] = 1'b0;
+end 
+// a_in[ 2 ]
+initial
+begin
+	a_in[2] = 1'b0;
+	a_in[2] = #60000 1'b1;
+	a_in[2] = #170000 1'b0;
+end 
+// a_in[ 1 ]
+initial
+begin
+	a_in[1] = 1'b0;
+end 
+// a_in[ 0 ]
+initial
+begin
+	a_in[0] = 1'b0;
+	a_in[0] = #60000 1'b1;
+	a_in[0] = #170000 1'b0;
+end 
+// b_in[ 3 ]
+initial
+begin
+	b_in[3] = 1'b0;
+end 
+// b_in[ 2 ]
+initial
+begin
+	b_in[2] = 1'b0;
+end 
+// b_in[ 1 ]
+initial
+begin
+	b_in[1] = 1'b0;
+	b_in[1] = #190000 1'b1;
+	b_in[1] = #180000 1'b0;
+end 
+// b_in[ 0 ]
+initial
+begin
+	b_in[0] = 1'b0;
+	b_in[0] = #190000 1'b1;
+	b_in[0] = #180000 1'b0;
+end 
+
+// carry_in
+initial
+begin
+	carry_in = 1'b0;
+	carry_in = #160000 1'b1;
+	carry_in = #320000 1'b0;
+end 
+
+CarryLookAheadAdder_vlg_sample_tst tb_sample (
+	.a_in(a_in),
+	.b_in(b_in),
+	.carry_in(carry_in),
+	.sampler_tx(sampler)
+);
+
+CarryLookAheadAdder_vlg_check_tst tb_out(
+	.carry_out(carry_out),
+	.sum_out(sum_out),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,182 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Programs/modeltech64_10.7/examples
+T_opt
+!s110 1587549389
+VWkZOm?7V7JMRDHQA76hfS2
+04 19 5 work serial4fulladder_tb bench 1
+=1-38378bef532a-5ea014cc-355-1240
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+R0
+Efulladder
+Z1 w1587539018
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z4 dD:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/ModelSimTestBench
+Z5 8D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/FullAdder.vhd
+Z6 FD:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/FullAdder.vhd
+l0
+L6
+VZeoe0kbS9UWiS:9LDBP=G0
+!s100 onaWY@M3;kU1846WPXh[72
+Z7 OL;C;10.7;67
+32
+Z8 !s110 1587549379
+!i10b 1
+Z9 !s108 1587549379.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/FullAdder.vhd|
+Z11 !s107 D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/FullAdder.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Afa
+R2
+R3
+DEx4 work 9 fulladder 0 22 Zeoe0kbS9UWiS:9LDBP=G0
+l20
+L13
+V02D_bGCbK<K8=62:n`S`f2
+!s100 3^3MPcMCXRGjTaI?GEUOI1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Ehalf_adder
+Z14 w1587539032
+R2
+R3
+R4
+Z15 8D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/HalfAdder.vhd
+Z16 FD:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/HalfAdder.vhd
+l0
+L5
+V[DIH`3RfIiNUEZ9T=:75A1
+!s100 gP=Q^gE7fo7Z3I8n3UF`N1
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/HalfAdder.vhd|
+Z18 !s107 D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/HalfAdder.vhd|
+!i113 0
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 10 half_adder 0 22 [DIH`3RfIiNUEZ9T=:75A1
+l12
+L11
+VIPPHak8;PkaYfOD3bP_`03
+!s100 zDFacz`e64fPdk>b_4@:X1
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 0
+R12
+R13
+Eserial4fulladder
+Z19 w1587541095
+R2
+R3
+R4
+Z20 8D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder.vhd
+Z21 FD:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder.vhd
+l0
+L6
+V=^9^dnDCeHJM5Z<hZR8a?1
+!s100 >3ETo[_T4?g]cQN<_kJQf1
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder.vhd|
+Z23 !s107 D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder.vhd|
+!i113 0
+R12
+R13
+Asfa
+R2
+R3
+DEx4 work 16 serial4fulladder 0 22 =^9^dnDCeHJM5Z<hZR8a?1
+l24
+L16
+VEJkcK<`lmL^nKbmTBi0c63
+!s100 di8aLWLNM@gVWW=g@JH980
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 0
+R12
+R13
+Eserial4fulladder_tb
+Z24 w1587548373
+Z25 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z26 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z27 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+R4
+Z28 8D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder_tb.vhd
+Z29 FD:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder_tb.vhd
+l0
+L12
+VzQiFjdaV^DYGb_J]96U>e1
+!s100 5Yf`gYYhIEcX94EUff7NB2
+R7
+32
+Z30 !s110 1587549398
+!i10b 1
+Z31 !s108 1587549398.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder_tb.vhd|
+Z33 !s107 D:/Programs/altera/13.0sp1/HW/HW2_Adders/Serial4FullAdder/Serial4FullAdder_tb.vhd|
+!i113 0
+R12
+R13
+Abench
+R25
+R26
+R27
+R2
+R3
+Z34 DEx4 work 19 serial4fulladder_tb 0 22 zQiFjdaV^DYGb_J]96U>e1
+l35
+L15
+Z35 Vf7O6XG=N_V@3nYFM6fJ=]1
+Z36 !s100 LlJ<_9ZWB`E;EIzY9CVOe2
+R7
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 0
+R12
+R13

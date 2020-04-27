@@ -1,0 +1,618 @@
+TimeQuest Timing Analyzer report for Counter
+Mon Apr 27 20:17:44 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock'
+ 12. Hold: 'clock'
+ 13. Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Setup Transfers
+ 19. Hold Transfers
+ 20. Report TCCS
+ 21. Report RSKM
+ 22. Unconstrained Paths
+ 23. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Counter                                                           ;
+; Device Family      ; MAX II                                                            ;
+; Device Name        ; EPM240F100C5                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 220.6 MHz ; 220.6 MHz       ; clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -3.533 ; -65.324       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 1.746 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock'                                                                                                                      ;
++--------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.533 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.200      ;
+; -3.533 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.200      ;
+; -3.533 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.200      ;
+; -3.315 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.982      ;
+; -3.315 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.982      ;
+; -3.315 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.982      ;
+; -3.181 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.848      ;
+; -3.141 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.808      ;
+; -3.141 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.808      ;
+; -3.141 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.808      ;
+; -2.963 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.630      ;
+; -2.950 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.617      ;
+; -2.949 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.616      ;
+; -2.945 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.612      ;
+; -2.944 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.611      ;
+; -2.944 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.611      ;
+; -2.943 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.610      ;
+; -2.942 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.609      ;
+; -2.911 ; natural_seq_hex_1[0] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.578      ;
+; -2.911 ; natural_seq_hex_1[0] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.578      ;
+; -2.910 ; natural_seq_hex_1[0] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.577      ;
+; -2.908 ; natural_seq_hex_1[0] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.575      ;
+; -2.906 ; natural_seq_hex_1[0] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.573      ;
+; -2.901 ; natural_seq_hex_1[0] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.568      ;
+; -2.900 ; natural_seq_hex_1[0] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.567      ;
+; -2.869 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.536      ;
+; -2.789 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.456      ;
+; -2.772 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.439      ;
+; -2.772 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.439      ;
+; -2.772 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.439      ;
+; -2.750 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.417      ;
+; -2.670 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.337      ;
+; -2.670 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.337      ;
+; -2.669 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.336      ;
+; -2.667 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.334      ;
+; -2.659 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.326      ;
+; -2.655 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.322      ;
+; -2.654 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.321      ;
+; -2.560 ; natural_seq_hex_1[1] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.227      ;
+; -2.548 ; D_Flip_Flop:u3|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.215      ;
+; -2.526 ; D_Flip_Flop:u2|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.193      ;
+; -2.485 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.152      ;
+; -2.482 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.149      ;
+; -2.476 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u0|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 3.143      ;
+; -2.435 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.102      ;
+; -2.435 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.102      ;
+; -2.434 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.101      ;
+; -2.432 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.099      ;
+; -2.426 ; natural_seq_hex_1[1] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.093      ;
+; -2.425 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.092      ;
+; -2.425 ; natural_seq_hex_1[1] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.092      ;
+; -2.424 ; natural_seq_hex_1[1] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.091      ;
+; -2.423 ; natural_seq_hex_1[1] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.090      ;
+; -2.421 ; natural_seq_hex_1[1] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.088      ;
+; -2.420 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.087      ;
+; -2.420 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 3.087      ;
+; -2.417 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.084      ;
+; -2.415 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.082      ;
+; -2.415 ; natural_seq_hex_1[1] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.082      ;
+; -2.414 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.081      ;
+; -2.411 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.078      ;
+; -2.409 ; natural_seq_hex_1[1] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.076      ;
+; -2.407 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.074      ;
+; -2.407 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.074      ;
+; -2.406 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.073      ;
+; -2.404 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 3.071      ;
+; -2.287 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.954      ;
+; -2.236 ; natural_seq_hex_1[0] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.903      ;
+; -2.096 ; natural_seq_hex_1[3] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.763      ;
+; -2.094 ; natural_seq_hex_1[3] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.761      ;
+; -2.090 ; natural_seq_hex_1[3] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.757      ;
+; -2.088 ; natural_seq_hex_1[3] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.755      ;
+; -2.084 ; natural_seq_hex_1[3] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.751      ;
+; -2.081 ; natural_seq_hex_1[3] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.748      ;
+; -2.080 ; natural_seq_hex_1[3] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.747      ;
+; -2.076 ; D_Flip_Flop:u3|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.743      ;
+; -1.885 ; natural_seq_hex_1[0] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.552      ;
+; -1.881 ; natural_seq_hex_1[0] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.548      ;
+; -1.864 ; D_Flip_Flop:u2|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.531      ;
+; -1.846 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 1.000        ; 0.000      ; 2.513      ;
+; -1.833 ; natural_seq_hex_1[2] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.500      ;
+; -1.832 ; natural_seq_hex_1[2] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.499      ;
+; -1.828 ; natural_seq_hex_1[2] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.495      ;
+; -1.826 ; natural_seq_hex_1[2] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.493      ;
+; -1.822 ; natural_seq_hex_1[2] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.489      ;
+; -1.822 ; natural_seq_hex_1[2] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.489      ;
+; -1.821 ; natural_seq_hex_1[2] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.488      ;
+; -1.794 ; natural_seq_hex_1[3] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.461      ;
+; -1.742 ; natural_seq_hex_1[2] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.409      ;
+; -1.731 ; natural_seq_hex_1[2] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.398      ;
+; -1.730 ; natural_seq_hex_1[2] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.397      ;
+; -1.658 ; natural_seq_hex_1[3] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.325      ;
+; -1.651 ; natural_seq_hex_1[3] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.318      ;
+; -1.538 ; natural_seq_hex_1[1] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.205      ;
+; -1.520 ; natural_seq_hex_1[1] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 1.000        ; 0.000      ; 2.187      ;
+; -1.300 ; natural_seq_hex_1[0] ; natural_seq_hex_1[0]          ; clock        ; clock       ; 1.000        ; 0.000      ; 1.967      ;
++--------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock'                                                                                                                      ;
++-------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.746 ; natural_seq_hex_1[0] ; natural_seq_hex_1[0]          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.967      ;
+; 1.966 ; natural_seq_hex_1[1] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.187      ;
+; 1.984 ; natural_seq_hex_1[1] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.205      ;
+; 2.097 ; natural_seq_hex_1[3] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.318      ;
+; 2.104 ; natural_seq_hex_1[3] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.325      ;
+; 2.176 ; natural_seq_hex_1[2] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.397      ;
+; 2.177 ; natural_seq_hex_1[2] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.398      ;
+; 2.188 ; natural_seq_hex_1[2] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.409      ;
+; 2.240 ; natural_seq_hex_1[3] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.461      ;
+; 2.267 ; natural_seq_hex_1[2] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.488      ;
+; 2.268 ; natural_seq_hex_1[2] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.489      ;
+; 2.268 ; natural_seq_hex_1[2] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.489      ;
+; 2.272 ; natural_seq_hex_1[2] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.493      ;
+; 2.274 ; natural_seq_hex_1[2] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.495      ;
+; 2.278 ; natural_seq_hex_1[2] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.499      ;
+; 2.279 ; natural_seq_hex_1[2] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.500      ;
+; 2.292 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 2.513      ;
+; 2.310 ; D_Flip_Flop:u2|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 2.531      ;
+; 2.327 ; natural_seq_hex_1[0] ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.548      ;
+; 2.331 ; natural_seq_hex_1[0] ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.552      ;
+; 2.522 ; D_Flip_Flop:u3|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 2.743      ;
+; 2.526 ; natural_seq_hex_1[3] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.747      ;
+; 2.527 ; natural_seq_hex_1[3] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.748      ;
+; 2.530 ; natural_seq_hex_1[3] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.751      ;
+; 2.534 ; natural_seq_hex_1[3] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.755      ;
+; 2.536 ; natural_seq_hex_1[3] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.757      ;
+; 2.540 ; natural_seq_hex_1[3] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.761      ;
+; 2.542 ; natural_seq_hex_1[3] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.763      ;
+; 2.682 ; natural_seq_hex_1[0] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 2.903      ;
+; 2.733 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 2.954      ;
+; 2.850 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.071      ;
+; 2.852 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.073      ;
+; 2.853 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.074      ;
+; 2.853 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.074      ;
+; 2.855 ; natural_seq_hex_1[1] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.076      ;
+; 2.857 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.078      ;
+; 2.860 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.081      ;
+; 2.861 ; D_Flip_Flop:u2|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.082      ;
+; 2.861 ; natural_seq_hex_1[1] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.082      ;
+; 2.863 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.084      ;
+; 2.866 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.087      ;
+; 2.866 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.087      ;
+; 2.867 ; natural_seq_hex_1[1] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.088      ;
+; 2.869 ; natural_seq_hex_1[1] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.090      ;
+; 2.870 ; natural_seq_hex_1[1] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.091      ;
+; 2.871 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.092      ;
+; 2.871 ; natural_seq_hex_1[1] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.092      ;
+; 2.872 ; natural_seq_hex_1[1] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.093      ;
+; 2.878 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.099      ;
+; 2.880 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.101      ;
+; 2.881 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.102      ;
+; 2.881 ; D_Flip_Flop:u1|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.102      ;
+; 2.922 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u0|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.143      ;
+; 2.928 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.149      ;
+; 2.931 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u1|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.152      ;
+; 2.972 ; D_Flip_Flop:u2|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.193      ;
+; 2.994 ; D_Flip_Flop:u3|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.215      ;
+; 3.006 ; natural_seq_hex_1[1] ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.227      ;
+; 3.100 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.321      ;
+; 3.101 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.322      ;
+; 3.105 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.326      ;
+; 3.113 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.334      ;
+; 3.115 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.336      ;
+; 3.116 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.337      ;
+; 3.116 ; D_Flip_Flop:u3|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.337      ;
+; 3.196 ; D_Flip_Flop:u1|Q     ; D_Flip_Flop:u3|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.417      ;
+; 3.218 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.439      ;
+; 3.218 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.439      ;
+; 3.218 ; D_Flip_Flop:u0|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.439      ;
+; 3.235 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.456      ;
+; 3.315 ; D_Flip_Flop:u0|Q     ; D_Flip_Flop:u2|Q              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.536      ;
+; 3.346 ; natural_seq_hex_1[0] ; natural_out_encoded_1[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.567      ;
+; 3.347 ; natural_seq_hex_1[0] ; natural_out_encoded_1[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.568      ;
+; 3.352 ; natural_seq_hex_1[0] ; natural_out_encoded_1[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.573      ;
+; 3.354 ; natural_seq_hex_1[0] ; natural_out_encoded_1[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.575      ;
+; 3.356 ; natural_seq_hex_1[0] ; natural_out_encoded_1[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.577      ;
+; 3.357 ; natural_seq_hex_1[0] ; natural_out_encoded_1[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.578      ;
+; 3.357 ; natural_seq_hex_1[0] ; natural_out_encoded_1[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.578      ;
+; 3.388 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[6]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.609      ;
+; 3.389 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[1]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.610      ;
+; 3.390 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[2]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.611      ;
+; 3.390 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[4]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.611      ;
+; 3.391 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[3]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.612      ;
+; 3.395 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[5]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.616      ;
+; 3.396 ; D_Flip_Flop:u0|Q     ; natural_out_encoded_0[0]~reg0 ; clock        ; clock       ; 0.000        ; 0.000      ; 3.617      ;
+; 3.409 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.630      ;
+; 3.587 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.808      ;
+; 3.587 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.808      ;
+; 3.587 ; D_Flip_Flop:u3|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.808      ;
+; 3.627 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[3]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.848      ;
+; 3.761 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.982      ;
+; 3.761 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.982      ;
+; 3.761 ; D_Flip_Flop:u1|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.982      ;
+; 3.979 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[0]          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.200      ;
+; 3.979 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[1]          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.200      ;
+; 3.979 ; D_Flip_Flop:u2|Q     ; natural_seq_hex_1[2]          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.200      ;
++-------+----------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'clock'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -2.289 ; 1.000        ; 3.289          ; Port Rate        ; clock ; Rise       ; clock                             ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; D_Flip_Flop:u0|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; D_Flip_Flop:u0|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; D_Flip_Flop:u1|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; D_Flip_Flop:u1|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; D_Flip_Flop:u2|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; D_Flip_Flop:u2|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; D_Flip_Flop:u3|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; D_Flip_Flop:u3|Q                  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[0]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[0]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[1]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[1]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[2]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[2]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[3]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[3]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[4]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[4]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[5]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[5]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[6]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[6]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[0]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[0]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[1]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[1]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[2]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[2]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[3]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[3]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[4]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[4]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[5]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[5]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[6]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[6]~reg0     ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[0]              ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[0]              ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[1]              ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[1]              ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[2]              ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[2]              ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[3]              ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[3]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[2]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[2]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[3]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[3]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[4]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[4]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[5]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[5]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_0[6]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_0[6]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[2]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[2]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[3]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[3]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[4]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[4]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[5]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[5]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_out_encoded_1[6]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_out_encoded_1[6]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; natural_seq_hex_1[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; natural_seq_hex_1[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; u0|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; u0|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; u1|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; u1|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; u2|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; u2|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; u3|Q|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; u3|Q|clk                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset     ; clock      ; 1.392 ; 1.392 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset     ; clock      ; -0.835 ; -0.835 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                 ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; natural_out_encoded_0[*]  ; clock      ; 8.090 ; 8.090 ; Rise       ; clock           ;
+;  natural_out_encoded_0[0] ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  natural_out_encoded_0[1] ; clock      ; 7.989 ; 7.989 ; Rise       ; clock           ;
+;  natural_out_encoded_0[2] ; clock      ; 7.991 ; 7.991 ; Rise       ; clock           ;
+;  natural_out_encoded_0[3] ; clock      ; 7.987 ; 7.987 ; Rise       ; clock           ;
+;  natural_out_encoded_0[4] ; clock      ; 8.070 ; 8.070 ; Rise       ; clock           ;
+;  natural_out_encoded_0[5] ; clock      ; 8.090 ; 8.090 ; Rise       ; clock           ;
+;  natural_out_encoded_0[6] ; clock      ; 8.079 ; 8.079 ; Rise       ; clock           ;
+; natural_out_encoded_1[*]  ; clock      ; 8.202 ; 8.202 ; Rise       ; clock           ;
+;  natural_out_encoded_1[0] ; clock      ; 8.081 ; 8.081 ; Rise       ; clock           ;
+;  natural_out_encoded_1[1] ; clock      ; 8.202 ; 8.202 ; Rise       ; clock           ;
+;  natural_out_encoded_1[2] ; clock      ; 8.090 ; 8.090 ; Rise       ; clock           ;
+;  natural_out_encoded_1[3] ; clock      ; 8.085 ; 8.085 ; Rise       ; clock           ;
+;  natural_out_encoded_1[4] ; clock      ; 8.190 ; 8.190 ; Rise       ; clock           ;
+;  natural_out_encoded_1[5] ; clock      ; 8.102 ; 8.102 ; Rise       ; clock           ;
+;  natural_out_encoded_1[6] ; clock      ; 8.179 ; 8.179 ; Rise       ; clock           ;
+; natural_out_test_0[*]     ; clock      ; 9.422 ; 9.422 ; Rise       ; clock           ;
+;  natural_out_test_0[0]    ; clock      ; 9.422 ; 9.422 ; Rise       ; clock           ;
+;  natural_out_test_0[1]    ; clock      ; 8.141 ; 8.141 ; Rise       ; clock           ;
+;  natural_out_test_0[2]    ; clock      ; 8.132 ; 8.132 ; Rise       ; clock           ;
+;  natural_out_test_0[3]    ; clock      ; 8.677 ; 8.677 ; Rise       ; clock           ;
+; natural_out_test_1[*]     ; clock      ; 8.626 ; 8.626 ; Rise       ; clock           ;
+;  natural_out_test_1[0]    ; clock      ; 8.126 ; 8.126 ; Rise       ; clock           ;
+;  natural_out_test_1[1]    ; clock      ; 8.104 ; 8.104 ; Rise       ; clock           ;
+;  natural_out_test_1[2]    ; clock      ; 8.626 ; 8.626 ; Rise       ; clock           ;
+;  natural_out_test_1[3]    ; clock      ; 7.991 ; 7.991 ; Rise       ; clock           ;
++---------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; natural_out_encoded_0[*]  ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  natural_out_encoded_0[0] ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  natural_out_encoded_0[1] ; clock      ; 7.989 ; 7.989 ; Rise       ; clock           ;
+;  natural_out_encoded_0[2] ; clock      ; 7.991 ; 7.991 ; Rise       ; clock           ;
+;  natural_out_encoded_0[3] ; clock      ; 7.987 ; 7.987 ; Rise       ; clock           ;
+;  natural_out_encoded_0[4] ; clock      ; 8.070 ; 8.070 ; Rise       ; clock           ;
+;  natural_out_encoded_0[5] ; clock      ; 8.090 ; 8.090 ; Rise       ; clock           ;
+;  natural_out_encoded_0[6] ; clock      ; 8.079 ; 8.079 ; Rise       ; clock           ;
+; natural_out_encoded_1[*]  ; clock      ; 8.081 ; 8.081 ; Rise       ; clock           ;
+;  natural_out_encoded_1[0] ; clock      ; 8.081 ; 8.081 ; Rise       ; clock           ;
+;  natural_out_encoded_1[1] ; clock      ; 8.202 ; 8.202 ; Rise       ; clock           ;
+;  natural_out_encoded_1[2] ; clock      ; 8.090 ; 8.090 ; Rise       ; clock           ;
+;  natural_out_encoded_1[3] ; clock      ; 8.085 ; 8.085 ; Rise       ; clock           ;
+;  natural_out_encoded_1[4] ; clock      ; 8.190 ; 8.190 ; Rise       ; clock           ;
+;  natural_out_encoded_1[5] ; clock      ; 8.102 ; 8.102 ; Rise       ; clock           ;
+;  natural_out_encoded_1[6] ; clock      ; 8.179 ; 8.179 ; Rise       ; clock           ;
+; natural_out_test_0[*]     ; clock      ; 8.132 ; 8.132 ; Rise       ; clock           ;
+;  natural_out_test_0[0]    ; clock      ; 9.422 ; 9.422 ; Rise       ; clock           ;
+;  natural_out_test_0[1]    ; clock      ; 8.141 ; 8.141 ; Rise       ; clock           ;
+;  natural_out_test_0[2]    ; clock      ; 8.132 ; 8.132 ; Rise       ; clock           ;
+;  natural_out_test_0[3]    ; clock      ; 8.677 ; 8.677 ; Rise       ; clock           ;
+; natural_out_test_1[*]     ; clock      ; 7.991 ; 7.991 ; Rise       ; clock           ;
+;  natural_out_test_1[0]    ; clock      ; 8.126 ; 8.126 ; Rise       ; clock           ;
+;  natural_out_test_1[1]    ; clock      ; 8.104 ; 8.104 ; Rise       ; clock           ;
+;  natural_out_test_1[2]    ; clock      ; 8.626 ; 8.626 ; Rise       ; clock           ;
+;  natural_out_test_1[3]    ; clock      ; 7.991 ; 7.991 ; Rise       ; clock           ;
++---------------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 96       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 96       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 22    ; 22   ;
+; Unconstrained Output Ports      ; 22    ; 22   ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Apr 27 20:17:42 2020
+Info: Command: quartus_sta Counter -c Counter
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Counter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.533
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.533       -65.324 clock 
+Info (332146): Worst-case hold slack is 1.746
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.746         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.289        -2.289 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4526 megabytes
+    Info: Processing ended: Mon Apr 27 20:17:44 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

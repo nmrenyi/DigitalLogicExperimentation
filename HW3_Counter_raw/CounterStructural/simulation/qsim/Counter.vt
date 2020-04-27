@@ -1,0 +1,609 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/27/2020 20:19:51"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Counter
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Counter_vlg_sample_tst(
+	clock,
+	reset,
+	sampler_tx
+);
+input  clock;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clock or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Counter_vlg_check_tst (
+	natural_out_encoded_0,
+	natural_out_encoded_1,
+	natural_out_test_0,
+	natural_out_test_1,
+	sampler_rx
+);
+input [6:0] natural_out_encoded_0;
+input [6:0] natural_out_encoded_1;
+input [3:0] natural_out_test_0;
+input [3:0] natural_out_test_1;
+input sampler_rx;
+
+reg [6:0] natural_out_encoded_0_expected;
+reg [6:0] natural_out_encoded_1_expected;
+reg [3:0] natural_out_test_0_expected;
+reg [3:0] natural_out_test_1_expected;
+
+reg [6:0] natural_out_encoded_0_prev;
+reg [6:0] natural_out_encoded_1_prev;
+reg [3:0] natural_out_test_0_prev;
+reg [3:0] natural_out_test_1_prev;
+
+reg [6:0] natural_out_encoded_0_expected_prev;
+reg [6:0] natural_out_encoded_1_expected_prev;
+reg [3:0] natural_out_test_0_expected_prev;
+reg [3:0] natural_out_test_1_expected_prev;
+
+reg [6:0] last_natural_out_encoded_0_exp;
+reg [6:0] last_natural_out_encoded_1_exp;
+reg [3:0] last_natural_out_test_0_exp;
+reg [3:0] last_natural_out_test_1_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	natural_out_encoded_0_prev = natural_out_encoded_0;
+	natural_out_encoded_1_prev = natural_out_encoded_1;
+	natural_out_test_0_prev = natural_out_test_0;
+	natural_out_test_1_prev = natural_out_test_1;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	natural_out_encoded_0_expected_prev = natural_out_encoded_0_expected;
+	natural_out_encoded_1_expected_prev = natural_out_encoded_1_expected;
+	natural_out_test_0_expected_prev = natural_out_test_0_expected;
+	natural_out_test_1_expected_prev = natural_out_test_1_expected;
+end
+
+
+// expected natural_out_encoded_0[ 6 ]
+initial
+begin
+	natural_out_encoded_0_expected[6] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 5 ]
+initial
+begin
+	natural_out_encoded_0_expected[5] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 4 ]
+initial
+begin
+	natural_out_encoded_0_expected[4] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 3 ]
+initial
+begin
+	natural_out_encoded_0_expected[3] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 2 ]
+initial
+begin
+	natural_out_encoded_0_expected[2] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 1 ]
+initial
+begin
+	natural_out_encoded_0_expected[1] = 1'bX;
+end 
+// expected natural_out_encoded_0[ 0 ]
+initial
+begin
+	natural_out_encoded_0_expected[0] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 6 ]
+initial
+begin
+	natural_out_encoded_1_expected[6] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 5 ]
+initial
+begin
+	natural_out_encoded_1_expected[5] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 4 ]
+initial
+begin
+	natural_out_encoded_1_expected[4] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 3 ]
+initial
+begin
+	natural_out_encoded_1_expected[3] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 2 ]
+initial
+begin
+	natural_out_encoded_1_expected[2] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 1 ]
+initial
+begin
+	natural_out_encoded_1_expected[1] = 1'bX;
+end 
+// expected natural_out_encoded_1[ 0 ]
+initial
+begin
+	natural_out_encoded_1_expected[0] = 1'bX;
+end 
+// expected natural_out_test_0[ 3 ]
+initial
+begin
+	natural_out_test_0_expected[3] = 1'bX;
+end 
+// expected natural_out_test_0[ 2 ]
+initial
+begin
+	natural_out_test_0_expected[2] = 1'bX;
+end 
+// expected natural_out_test_0[ 1 ]
+initial
+begin
+	natural_out_test_0_expected[1] = 1'bX;
+end 
+// expected natural_out_test_0[ 0 ]
+initial
+begin
+	natural_out_test_0_expected[0] = 1'bX;
+end 
+// expected natural_out_test_1[ 3 ]
+initial
+begin
+	natural_out_test_1_expected[3] = 1'bX;
+end 
+// expected natural_out_test_1[ 2 ]
+initial
+begin
+	natural_out_test_1_expected[2] = 1'bX;
+end 
+// expected natural_out_test_1[ 1 ]
+initial
+begin
+	natural_out_test_1_expected[1] = 1'bX;
+end 
+// expected natural_out_test_1[ 0 ]
+initial
+begin
+	natural_out_test_1_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(natural_out_encoded_0_expected or natural_out_encoded_0 or natural_out_encoded_1_expected or natural_out_encoded_1 or natural_out_test_0_expected or natural_out_test_0 or natural_out_test_1_expected or natural_out_test_1)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected natural_out_encoded_0 = %b | expected natural_out_encoded_1 = %b | expected natural_out_test_0 = %b | expected natural_out_test_1 = %b | ",natural_out_encoded_0_expected_prev,natural_out_encoded_1_expected_prev,natural_out_test_0_expected_prev,natural_out_test_1_expected_prev);
+	$display("| real natural_out_encoded_0 = %b | real natural_out_encoded_1 = %b | real natural_out_test_0 = %b | real natural_out_test_1 = %b | ",natural_out_encoded_0_prev,natural_out_encoded_1_prev,natural_out_test_0_prev,natural_out_test_1_prev);
+`endif
+	if (
+		( natural_out_encoded_0_expected_prev[0] !== 1'bx ) && ( natural_out_encoded_0_prev[0] !== natural_out_encoded_0_expected_prev[0] )
+		&& ((natural_out_encoded_0_expected_prev[0] !== last_natural_out_encoded_0_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[0] = natural_out_encoded_0_expected_prev[0];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[1] !== 1'bx ) && ( natural_out_encoded_0_prev[1] !== natural_out_encoded_0_expected_prev[1] )
+		&& ((natural_out_encoded_0_expected_prev[1] !== last_natural_out_encoded_0_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[1] = natural_out_encoded_0_expected_prev[1];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[2] !== 1'bx ) && ( natural_out_encoded_0_prev[2] !== natural_out_encoded_0_expected_prev[2] )
+		&& ((natural_out_encoded_0_expected_prev[2] !== last_natural_out_encoded_0_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[2] = natural_out_encoded_0_expected_prev[2];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[3] !== 1'bx ) && ( natural_out_encoded_0_prev[3] !== natural_out_encoded_0_expected_prev[3] )
+		&& ((natural_out_encoded_0_expected_prev[3] !== last_natural_out_encoded_0_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[3] = natural_out_encoded_0_expected_prev[3];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[4] !== 1'bx ) && ( natural_out_encoded_0_prev[4] !== natural_out_encoded_0_expected_prev[4] )
+		&& ((natural_out_encoded_0_expected_prev[4] !== last_natural_out_encoded_0_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[4] = natural_out_encoded_0_expected_prev[4];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[5] !== 1'bx ) && ( natural_out_encoded_0_prev[5] !== natural_out_encoded_0_expected_prev[5] )
+		&& ((natural_out_encoded_0_expected_prev[5] !== last_natural_out_encoded_0_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[5] = natural_out_encoded_0_expected_prev[5];
+	end
+	if (
+		( natural_out_encoded_0_expected_prev[6] !== 1'bx ) && ( natural_out_encoded_0_prev[6] !== natural_out_encoded_0_expected_prev[6] )
+		&& ((natural_out_encoded_0_expected_prev[6] !== last_natural_out_encoded_0_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_0[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_0_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_natural_out_encoded_0_exp[6] = natural_out_encoded_0_expected_prev[6];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[0] !== 1'bx ) && ( natural_out_encoded_1_prev[0] !== natural_out_encoded_1_expected_prev[0] )
+		&& ((natural_out_encoded_1_expected_prev[0] !== last_natural_out_encoded_1_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[0] = natural_out_encoded_1_expected_prev[0];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[1] !== 1'bx ) && ( natural_out_encoded_1_prev[1] !== natural_out_encoded_1_expected_prev[1] )
+		&& ((natural_out_encoded_1_expected_prev[1] !== last_natural_out_encoded_1_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[1] = natural_out_encoded_1_expected_prev[1];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[2] !== 1'bx ) && ( natural_out_encoded_1_prev[2] !== natural_out_encoded_1_expected_prev[2] )
+		&& ((natural_out_encoded_1_expected_prev[2] !== last_natural_out_encoded_1_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[2] = natural_out_encoded_1_expected_prev[2];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[3] !== 1'bx ) && ( natural_out_encoded_1_prev[3] !== natural_out_encoded_1_expected_prev[3] )
+		&& ((natural_out_encoded_1_expected_prev[3] !== last_natural_out_encoded_1_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[3] = natural_out_encoded_1_expected_prev[3];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[4] !== 1'bx ) && ( natural_out_encoded_1_prev[4] !== natural_out_encoded_1_expected_prev[4] )
+		&& ((natural_out_encoded_1_expected_prev[4] !== last_natural_out_encoded_1_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[4] = natural_out_encoded_1_expected_prev[4];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[5] !== 1'bx ) && ( natural_out_encoded_1_prev[5] !== natural_out_encoded_1_expected_prev[5] )
+		&& ((natural_out_encoded_1_expected_prev[5] !== last_natural_out_encoded_1_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[5] = natural_out_encoded_1_expected_prev[5];
+	end
+	if (
+		( natural_out_encoded_1_expected_prev[6] !== 1'bx ) && ( natural_out_encoded_1_prev[6] !== natural_out_encoded_1_expected_prev[6] )
+		&& ((natural_out_encoded_1_expected_prev[6] !== last_natural_out_encoded_1_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_encoded_1[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_encoded_1_expected_prev);
+		$display ("     Real value = %b", natural_out_encoded_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_natural_out_encoded_1_exp[6] = natural_out_encoded_1_expected_prev[6];
+	end
+	if (
+		( natural_out_test_0_expected_prev[0] !== 1'bx ) && ( natural_out_test_0_prev[0] !== natural_out_test_0_expected_prev[0] )
+		&& ((natural_out_test_0_expected_prev[0] !== last_natural_out_test_0_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_0_expected_prev);
+		$display ("     Real value = %b", natural_out_test_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_natural_out_test_0_exp[0] = natural_out_test_0_expected_prev[0];
+	end
+	if (
+		( natural_out_test_0_expected_prev[1] !== 1'bx ) && ( natural_out_test_0_prev[1] !== natural_out_test_0_expected_prev[1] )
+		&& ((natural_out_test_0_expected_prev[1] !== last_natural_out_test_0_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_0_expected_prev);
+		$display ("     Real value = %b", natural_out_test_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_natural_out_test_0_exp[1] = natural_out_test_0_expected_prev[1];
+	end
+	if (
+		( natural_out_test_0_expected_prev[2] !== 1'bx ) && ( natural_out_test_0_prev[2] !== natural_out_test_0_expected_prev[2] )
+		&& ((natural_out_test_0_expected_prev[2] !== last_natural_out_test_0_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_0_expected_prev);
+		$display ("     Real value = %b", natural_out_test_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_natural_out_test_0_exp[2] = natural_out_test_0_expected_prev[2];
+	end
+	if (
+		( natural_out_test_0_expected_prev[3] !== 1'bx ) && ( natural_out_test_0_prev[3] !== natural_out_test_0_expected_prev[3] )
+		&& ((natural_out_test_0_expected_prev[3] !== last_natural_out_test_0_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_0_expected_prev);
+		$display ("     Real value = %b", natural_out_test_0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_natural_out_test_0_exp[3] = natural_out_test_0_expected_prev[3];
+	end
+	if (
+		( natural_out_test_1_expected_prev[0] !== 1'bx ) && ( natural_out_test_1_prev[0] !== natural_out_test_1_expected_prev[0] )
+		&& ((natural_out_test_1_expected_prev[0] !== last_natural_out_test_1_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_1_expected_prev);
+		$display ("     Real value = %b", natural_out_test_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_natural_out_test_1_exp[0] = natural_out_test_1_expected_prev[0];
+	end
+	if (
+		( natural_out_test_1_expected_prev[1] !== 1'bx ) && ( natural_out_test_1_prev[1] !== natural_out_test_1_expected_prev[1] )
+		&& ((natural_out_test_1_expected_prev[1] !== last_natural_out_test_1_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_1_expected_prev);
+		$display ("     Real value = %b", natural_out_test_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_natural_out_test_1_exp[1] = natural_out_test_1_expected_prev[1];
+	end
+	if (
+		( natural_out_test_1_expected_prev[2] !== 1'bx ) && ( natural_out_test_1_prev[2] !== natural_out_test_1_expected_prev[2] )
+		&& ((natural_out_test_1_expected_prev[2] !== last_natural_out_test_1_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_1_expected_prev);
+		$display ("     Real value = %b", natural_out_test_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_natural_out_test_1_exp[2] = natural_out_test_1_expected_prev[2];
+	end
+	if (
+		( natural_out_test_1_expected_prev[3] !== 1'bx ) && ( natural_out_test_1_prev[3] !== natural_out_test_1_expected_prev[3] )
+		&& ((natural_out_test_1_expected_prev[3] !== last_natural_out_test_1_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port natural_out_test_1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", natural_out_test_1_expected_prev);
+		$display ("     Real value = %b", natural_out_test_1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_natural_out_test_1_exp[3] = natural_out_test_1_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Counter_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clock;
+reg reset;
+// wires                                               
+wire [6:0] natural_out_encoded_0;
+wire [6:0] natural_out_encoded_1;
+wire [3:0] natural_out_test_0;
+wire [3:0] natural_out_test_1;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Counter i1 (
+// port map - connection between master ports and signals/registers   
+	.clock(clock),
+	.natural_out_encoded_0(natural_out_encoded_0),
+	.natural_out_encoded_1(natural_out_encoded_1),
+	.natural_out_test_0(natural_out_test_0),
+	.natural_out_test_1(natural_out_test_1),
+	.reset(reset)
+);
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #2500 1'b1;
+	#2500;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+	reset = #720000 1'b1;
+	reset = #30000 1'b0;
+end 
+
+Counter_vlg_sample_tst tb_sample (
+	.clock(clock),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+Counter_vlg_check_tst tb_out(
+	.natural_out_encoded_0(natural_out_encoded_0),
+	.natural_out_encoded_1(natural_out_encoded_1),
+	.natural_out_test_0(natural_out_test_0),
+	.natural_out_test_1(natural_out_test_1),
+	.sampler_rx(sampler)
+);
+endmodule
+

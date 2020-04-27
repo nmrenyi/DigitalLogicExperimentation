@@ -1,0 +1,170 @@
+$comment
+	File created using the following command:
+		vcd file Serial4FullAdder.msim.vcd -direction
+$end
+$date
+	Wed Apr 22 15:40:51 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Serial4FullAdder_vlg_vec_tst $end
+$var reg 4 ! a_in [3:0] $end
+$var reg 4 " b_in [3:0] $end
+$var reg 1 # carry_in $end
+$var wire 1 $ carry_out $end
+$var wire 1 % sum_out [3] $end
+$var wire 1 & sum_out [2] $end
+$var wire 1 ' sum_out [1] $end
+$var wire 1 ( sum_out [0] $end
+$var wire 1 ) sampler $end
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 carry_in~combout $end
+$var wire 1 1 u1|u2|sum~0_combout $end
+$var wire 1 2 u1|cout~0_combout $end
+$var wire 1 3 u2|u2|sum~combout $end
+$var wire 1 4 u2|cout~0_combout $end
+$var wire 1 5 u3|u2|sum~combout $end
+$var wire 1 6 u3|cout~0_combout $end
+$var wire 1 7 u4|u2|sum~combout $end
+$var wire 1 8 u4|cout~0_combout $end
+$var wire 1 9 b_in~combout [3] $end
+$var wire 1 : b_in~combout [2] $end
+$var wire 1 ; b_in~combout [1] $end
+$var wire 1 < b_in~combout [0] $end
+$var wire 1 = a_in~combout [3] $end
+$var wire 1 > a_in~combout [2] $end
+$var wire 1 ? a_in~combout [1] $end
+$var wire 1 @ a_in~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+0$
+0(
+0'
+0&
+0%
+x)
+0*
+1+
+x,
+1-
+1.
+1/
+00
+01
+02
+03
+04
+05
+06
+07
+08
+0<
+0;
+0:
+09
+0@
+0?
+0>
+0=
+$end
+#30000
+1#
+10
+0)
+11
+1(
+#130000
+b100 "
+0#
+1:
+00
+1)
+15
+01
+1&
+0(
+#160000
+b10 !
+b11 !
+b110 "
+b111 "
+b11 "
+1<
+1;
+0:
+1@
+1?
+0)
+12
+14
+05
+13
+15
+0&
+1'
+1&
+#210000
+1#
+10
+1)
+11
+1(
+#220000
+b1011 "
+19
+0)
+17
+1%
+#250000
+b1 !
+b0 !
+0@
+0?
+1)
+01
+03
+0(
+0'
+#320000
+b1001 "
+b1000 "
+b0 "
+0<
+0;
+09
+0)
+02
+11
+04
+13
+07
+03
+05
+1(
+1'
+0%
+0'
+0&
+#370000
+0#
+00
+1)
+01
+0(
+#1000000

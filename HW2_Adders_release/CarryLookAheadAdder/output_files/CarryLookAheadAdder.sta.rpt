@@ -1,0 +1,263 @@
+TimeQuest Timing Analyzer report for CarryLookAheadAdder
+Wed Apr 22 16:09:21 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; CarryLookAheadAdder                                               ;
+; Device Family      ; MAX II                                                            ;
+; Device Name        ; EPM240F100C5                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
+
+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
+
+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; a_in[0]    ; carry_out   ; 15.671 ;    ;    ; 15.671 ;
+; a_in[0]    ; sum_out[0]  ; 9.565  ;    ;    ; 9.565  ;
+; a_in[0]    ; sum_out[1]  ; 12.639 ;    ;    ; 12.639 ;
+; a_in[0]    ; sum_out[2]  ; 12.535 ;    ;    ; 12.535 ;
+; a_in[0]    ; sum_out[3]  ; 15.735 ;    ;    ; 15.735 ;
+; a_in[1]    ; carry_out   ; 13.116 ;    ;    ; 13.116 ;
+; a_in[1]    ; sum_out[1]  ; 10.076 ;    ;    ; 10.076 ;
+; a_in[1]    ; sum_out[2]  ; 9.980  ;    ;    ; 9.980  ;
+; a_in[1]    ; sum_out[3]  ; 13.180 ;    ;    ; 13.180 ;
+; a_in[2]    ; carry_out   ; 11.978 ;    ;    ; 11.978 ;
+; a_in[2]    ; sum_out[2]  ; 8.848  ;    ;    ; 8.848  ;
+; a_in[2]    ; sum_out[3]  ; 12.042 ;    ;    ; 12.042 ;
+; a_in[3]    ; carry_out   ; 10.481 ;    ;    ; 10.481 ;
+; a_in[3]    ; sum_out[3]  ; 10.564 ;    ;    ; 10.564 ;
+; b_in[0]    ; carry_out   ; 14.918 ;    ;    ; 14.918 ;
+; b_in[0]    ; sum_out[0]  ; 8.812  ;    ;    ; 8.812  ;
+; b_in[0]    ; sum_out[1]  ; 11.886 ;    ;    ; 11.886 ;
+; b_in[0]    ; sum_out[2]  ; 11.782 ;    ;    ; 11.782 ;
+; b_in[0]    ; sum_out[3]  ; 14.982 ;    ;    ; 14.982 ;
+; b_in[1]    ; carry_out   ; 12.530 ;    ;    ; 12.530 ;
+; b_in[1]    ; sum_out[1]  ; 9.492  ;    ;    ; 9.492  ;
+; b_in[1]    ; sum_out[2]  ; 9.394  ;    ;    ; 9.394  ;
+; b_in[1]    ; sum_out[3]  ; 12.594 ;    ;    ; 12.594 ;
+; b_in[2]    ; carry_out   ; 12.341 ;    ;    ; 12.341 ;
+; b_in[2]    ; sum_out[2]  ; 9.223  ;    ;    ; 9.223  ;
+; b_in[2]    ; sum_out[3]  ; 12.405 ;    ;    ; 12.405 ;
+; b_in[3]    ; carry_out   ; 10.379 ;    ;    ; 10.379 ;
+; b_in[3]    ; sum_out[3]  ; 10.464 ;    ;    ; 10.464 ;
+; carry_in   ; carry_out   ; 15.403 ;    ;    ; 15.403 ;
+; carry_in   ; sum_out[0]  ; 9.290  ;    ;    ; 9.290  ;
+; carry_in   ; sum_out[1]  ; 12.371 ;    ;    ; 12.371 ;
+; carry_in   ; sum_out[2]  ; 12.267 ;    ;    ; 12.267 ;
+; carry_in   ; sum_out[3]  ; 15.467 ;    ;    ; 15.467 ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; a_in[0]    ; carry_out   ; 14.800 ;    ;    ; 14.800 ;
+; a_in[0]    ; sum_out[0]  ; 9.565  ;    ;    ; 9.565  ;
+; a_in[0]    ; sum_out[1]  ; 12.491 ;    ;    ; 12.491 ;
+; a_in[0]    ; sum_out[2]  ; 12.396 ;    ;    ; 12.396 ;
+; a_in[0]    ; sum_out[3]  ; 14.878 ;    ;    ; 14.878 ;
+; a_in[1]    ; carry_out   ; 12.384 ;    ;    ; 12.384 ;
+; a_in[1]    ; sum_out[1]  ; 10.076 ;    ;    ; 10.076 ;
+; a_in[1]    ; sum_out[2]  ; 9.980  ;    ;    ; 9.980  ;
+; a_in[1]    ; sum_out[3]  ; 12.462 ;    ;    ; 12.462 ;
+; a_in[2]    ; carry_out   ; 11.249 ;    ;    ; 11.249 ;
+; a_in[2]    ; sum_out[2]  ; 8.848  ;    ;    ; 8.848  ;
+; a_in[2]    ; sum_out[3]  ; 11.327 ;    ;    ; 11.327 ;
+; a_in[3]    ; carry_out   ; 10.481 ;    ;    ; 10.481 ;
+; a_in[3]    ; sum_out[3]  ; 10.564 ;    ;    ; 10.564 ;
+; b_in[0]    ; carry_out   ; 14.186 ;    ;    ; 14.186 ;
+; b_in[0]    ; sum_out[0]  ; 8.812  ;    ;    ; 8.812  ;
+; b_in[0]    ; sum_out[1]  ; 11.886 ;    ;    ; 11.886 ;
+; b_in[0]    ; sum_out[2]  ; 11.782 ;    ;    ; 11.782 ;
+; b_in[0]    ; sum_out[3]  ; 14.264 ;    ;    ; 14.264 ;
+; b_in[1]    ; carry_out   ; 11.798 ;    ;    ; 11.798 ;
+; b_in[1]    ; sum_out[1]  ; 9.492  ;    ;    ; 9.492  ;
+; b_in[1]    ; sum_out[2]  ; 9.394  ;    ;    ; 9.394  ;
+; b_in[1]    ; sum_out[3]  ; 11.876 ;    ;    ; 11.876 ;
+; b_in[2]    ; carry_out   ; 12.341 ;    ;    ; 12.341 ;
+; b_in[2]    ; sum_out[2]  ; 9.223  ;    ;    ; 9.223  ;
+; b_in[2]    ; sum_out[3]  ; 12.405 ;    ;    ; 12.405 ;
+; b_in[3]    ; carry_out   ; 10.379 ;    ;    ; 10.379 ;
+; b_in[3]    ; sum_out[3]  ; 10.464 ;    ;    ; 10.464 ;
+; carry_in   ; carry_out   ; 14.185 ;    ;    ; 14.185 ;
+; carry_in   ; sum_out[0]  ; 9.290  ;    ;    ; 9.290  ;
+; carry_in   ; sum_out[1]  ; 11.876 ;    ;    ; 11.876 ;
+; carry_in   ; sum_out[2]  ; 11.781 ;    ;    ; 11.781 ;
+; carry_in   ; sum_out[3]  ; 14.263 ;    ;    ; 14.263 ;
++------------+-------------+--------+----+----+--------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 33    ; 33   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Apr 22 16:09:19 2020
+Info: Command: quartus_sta CarryLookAheadAdder -c CarryLookAheadAdder
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'CarryLookAheadAdder.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4526 megabytes
+    Info: Processing ended: Wed Apr 22 16:09:21 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

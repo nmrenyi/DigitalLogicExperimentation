@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & FranÃ§ois FÃ©votte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[UTF8]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{数字逻辑实验 \\ 逐次进位加法器与超前进位加法器设计} % Title of the assignment
+
+\author{姓名:任一  \\学号:2018011423\\ \texttt{ry18@mails.tsinghua.edu.cn}} % Author name and email address
+
+\date{\today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+\lstset{
+    % backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=left, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+}
+
+\begin{document}
+
+\maketitle % Print the title
+\begin{center}
+    \begin{tabular}{l  r}
+    \hline
+
+        \multicolumn{2}{c}{实验环境} \\ \hline
+        操作系统: & Windows10家庭版 18362.72 \\ \hline% Date the experiment was performed
+        QuartusII版本: & Quartus II 13.0 sp1 \\ \hline% Partner names
+
+        ModelSim版本: & Modelsim SE-64 10.7 \\ \hline% Instructor/supervisor
+
+    \end{tabular}
+\end{center}
+\newpage
+
+
+\section{实验概述}
+\subsection{实验思路}
+在本实验中，我实现了逐次进位加法器与超前进位加法器。
+实现方法主要是通过元件例化，先设计半加器，利用半加器设计全加器，再用
+全加器设计逐次进位加法器与超前进位加法器。这样的逐层设计方法，有利于代码复用，
+提高了开发效率，降低了开发难度。
+
+\subsection{文件说明}
+Serial4FullAdder文件夹下是逐次进位加法器的工程文件和代码，
+CarryLookAheadAdder文件夹中是超前进位加法器的工程文件和代码，
+这两个文件夹下的ModelSimTestBench文件夹中是ModelSim模拟的工程文件。
+SimulationScreenshots文件夹中是使用Testbench在ModelSim中进行仿真的截图。
+JiebaScreenShots文件夹下是上述两种加法器在Jieba数电平台上的仿真截图。
+
+\section{实验结果}
+\subsection{Testbench仿真}
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{SFA.png}
+        \caption{逐次进位加法器仿真测试截图}
+    \end{figure}
+    \begin{figure}[h]
+        \label{md}
+        \centering
+            \includegraphics[width=0.8\textwidth]{CLA.png}
+            \caption{超前进位加法器仿真测试截图}
+        \end{figure}
+
+由仿真截图可以看出，我设计的逐次进位加法器与超前进位加法器很好地完成了
+加法和进位的任务。
+\clearpage
+
+\subsection{RTL Viewer}
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{Serial4FullAdder.png}
+        \caption{逐次进位加法器在CPLD中的电路图}
+    \end{figure}
+    \begin{figure}[h]
+        \label{md}
+        \centering
+            \includegraphics[width=0.8\textwidth]{CarryLookAheadAdder.png}
+            \caption{超前进位加法器在CPLD中的电路图}
+        \end{figure}
+通过QuartusII软件中的RTL Viewer功能，我得到了这两种加法器啊在CPLD中的电路图。
+可以清晰地看出，逐次进位加法器的电路比逐次进位加法器的电路要简洁一些。
+
+\clearpage
+\subsection{Jielab在线测试}
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{ZC.png}
+        \caption{逐次进位加法器仿真测试截图}
+    \end{figure}
+
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{CQ.png}
+        \caption{超前进位加法器仿真测试截图}
+    \end{figure}
+从图中可以清晰看到，逐次进位加法器实现了$0100+1111=10011$, 超前进位加法器实现了$1101+1001=10110$的任务。
+
+\clearpage
+
+\section{实验总结}
+在本次实验中，我感受到了元件例化所带来的便利，提高了VHDL编程能力，
+为后续项目的设计打下了基础。感谢老师和助教的悉心指导！
+
+
+\bibliographystyle{plain}
+\bibliography{ref} %这里的这个ref就是对文件ref.bib的引用
+
+\end{document}

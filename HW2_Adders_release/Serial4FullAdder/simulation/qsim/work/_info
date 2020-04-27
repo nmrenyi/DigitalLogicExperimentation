@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Programs\altera\13.0sp1\Serial4FullAdder\simulation\qsim
+vSerial4FullAdder
+Z1 InQNFzRRTXc_YYV`W2W^PU0
+Z2 VXc?_EV2_HGAHOE>mZc]To0
+Z3 dD:\Programs\altera\13.0sp1\Serial4FullAdder\simulation\qsim
+Z4 w1587541249
+Z5 8Serial4FullAdder.vo
+Z6 FSerial4FullAdder.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@serial4@full@adder
+!i10b 1
+Z10 !s100 RYKA@^1l^1b]Q[e9UHbzi0
+!s85 0
+Z11 !s108 1587541250.957000
+Z12 !s107 Serial4FullAdder.vo|
+Z13 !s90 -work|work|Serial4FullAdder.vo|
+!s101 -O0
+vSerial4FullAdder_vlg_check_tst
+!i10b 1
+!s100 ?5YTYahneJV<o:h]1;LN=1
+Igg0_o`lkE8MXjkcQRzjQ;1
+Vb5HnRQTmOPVS<2h73K7j12
+R3
+Z14 w1587541248
+Z15 8Serial4FullAdder.vt
+Z16 FSerial4FullAdder.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1587541251.134000
+Z18 !s107 Serial4FullAdder.vt|
+Z19 !s90 -work|work|Serial4FullAdder.vt|
+!s101 -O0
+R8
+n@serial4@full@adder_vlg_check_tst
+vSerial4FullAdder_vlg_sample_tst
+!i10b 1
+!s100 VaU`Ljmho575N@N0`@2QV3
+I<KMJQHnSZO6zkCn3f^?Ch3
+VVhE2OAiKhmgYL:oAGI1ia3
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@serial4@full@adder_vlg_sample_tst
+vSerial4FullAdder_vlg_vec_tst
+!i10b 1
+!s100 h?jG4Cg5k7DenNoIVjKAH2
+IC]1@R>DZ80`F_2aXH2zjK3
+V<=ARTS[Z]gT26LeY`beZI0
+R3
+R14
+R15
+R16
+L0 236
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@serial4@full@adder_vlg_vec_tst

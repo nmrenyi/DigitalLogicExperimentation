@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Apr 27 20:17:39 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Counter
+Top-level Entity Name : Counter
+Family : MAX II
+Device : EPM240F100C5
+Timing Models : Final
+Total logic elements : 24 / 240 ( 10 % )
+Total pins : 24 / 80 ( 30 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

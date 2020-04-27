@@ -1,0 +1,97 @@
+|Counter
+reset => D_Flip_Flop:u0.clr_n
+reset => natural_seq_hex_1[0].ACLR
+reset => natural_seq_hex_1[1].ACLR
+reset => natural_seq_hex_1[2].ACLR
+reset => natural_seq_hex_1[3].ACLR
+reset => D_Flip_Flop:u1.clr_n
+reset => D_Flip_Flop:u2.clr_n
+reset => D_Flip_Flop:u3.clr_n
+reset => natural_out_encoded_0[0]~reg0.ENA
+reset => natural_out_encoded_1[6]~reg0.ENA
+reset => natural_out_encoded_1[5]~reg0.ENA
+reset => natural_out_encoded_1[4]~reg0.ENA
+reset => natural_out_encoded_1[3]~reg0.ENA
+reset => natural_out_encoded_1[2]~reg0.ENA
+reset => natural_out_encoded_1[1]~reg0.ENA
+reset => natural_out_encoded_1[0]~reg0.ENA
+reset => natural_out_encoded_0[6]~reg0.ENA
+reset => natural_out_encoded_0[5]~reg0.ENA
+reset => natural_out_encoded_0[4]~reg0.ENA
+reset => natural_out_encoded_0[3]~reg0.ENA
+reset => natural_out_encoded_0[2]~reg0.ENA
+reset => natural_out_encoded_0[1]~reg0.ENA
+clock => D_Flip_Flop:u0.clock
+clock => natural_out_encoded_0[0]~reg0.CLK
+clock => natural_out_encoded_0[1]~reg0.CLK
+clock => natural_out_encoded_0[2]~reg0.CLK
+clock => natural_out_encoded_0[3]~reg0.CLK
+clock => natural_out_encoded_0[4]~reg0.CLK
+clock => natural_out_encoded_0[5]~reg0.CLK
+clock => natural_out_encoded_0[6]~reg0.CLK
+clock => natural_out_encoded_1[0]~reg0.CLK
+clock => natural_out_encoded_1[1]~reg0.CLK
+clock => natural_out_encoded_1[2]~reg0.CLK
+clock => natural_out_encoded_1[3]~reg0.CLK
+clock => natural_out_encoded_1[4]~reg0.CLK
+clock => natural_out_encoded_1[5]~reg0.CLK
+clock => natural_out_encoded_1[6]~reg0.CLK
+clock => natural_seq_hex_1[0].CLK
+clock => natural_seq_hex_1[1].CLK
+clock => natural_seq_hex_1[2].CLK
+clock => natural_seq_hex_1[3].CLK
+clock => D_Flip_Flop:u1.clock
+clock => D_Flip_Flop:u2.clock
+clock => D_Flip_Flop:u3.clock
+natural_out_encoded_0[0] <= natural_out_encoded_0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[1] <= natural_out_encoded_0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[2] <= natural_out_encoded_0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[3] <= natural_out_encoded_0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[4] <= natural_out_encoded_0[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[5] <= natural_out_encoded_0[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[6] <= natural_out_encoded_0[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[0] <= natural_out_encoded_1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[1] <= natural_out_encoded_1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[2] <= natural_out_encoded_1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[3] <= natural_out_encoded_1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[4] <= natural_out_encoded_1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[5] <= natural_out_encoded_1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[6] <= natural_out_encoded_1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test_0[0] <= D_Flip_Flop:u0.Q
+natural_out_test_0[1] <= D_Flip_Flop:u1.Q
+natural_out_test_0[2] <= D_Flip_Flop:u2.Q
+natural_out_test_0[3] <= D_Flip_Flop:u3.Q
+natural_out_test_1[0] <= natural_seq_hex_1[0].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test_1[1] <= natural_seq_hex_1[1].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test_1[2] <= natural_seq_hex_1[2].DB_MAX_OUTPUT_PORT_TYPE
+natural_out_test_1[3] <= natural_seq_hex_1[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u0
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u1
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u2
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u3
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,10 @@
+D:/Tsinghua/2020Spring/DigitalLogicExperiment/Final/Light/Light_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Tsinghua/2020Spring/DigitalLogicExperiment/Final/Light/Light_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Light_tb
+-- Compiling architecture bench of Light_tb
+
+} {} {}}

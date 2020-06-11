@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & FranÃ§ois FÃ©votte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[UTF8]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{数字逻辑实验 \\ 串行密码锁设计} % Title of the assignment
+
+\author{姓名:任一  \\学号:2018011423\\ \texttt{ry18@mails.tsinghua.edu.cn}} % Author name and email address
+
+\date{\today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+\lstset{
+    % backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=left, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+}
+
+\begin{document}
+
+\maketitle % Print the title
+\begin{center}
+    \begin{tabular}{l  r}
+    \hline
+
+        \multicolumn{2}{c}{实验环境} \\ \hline
+        操作系统: & Windows10家庭版 18362.72 \\ \hline% Date the experiment was performed
+        QuartusII版本: & Quartus II 13.0 sp1 \\ \hline% Partner names
+
+        ModelSim版本: & Modelsim SE-64 10.7 \\ \hline% Instructor/supervisor
+
+    \end{tabular}
+\end{center}
+\newpage
+
+
+\section{实验概述}
+\subsection{实验思路}
+在本实验中，我使用状态机，实现了串行密码锁的设计，具有密码设置和输入密码两种状态，并且能通过LED灯提示
+输入的密码是否正确。
+
+具体来说，我的状态有6个。分别是start, in1, in2, in3, check1, check2, check3, final.
+当模式为设置密码模式时，状态转移为start->in1->in2->in3->final.
+当模式为检查密码模式时，若输入正确，状态转移为start->check1->check2->check3->final并亮起表示输入正确的灯.
+若输入错误，则状态回到start并亮起表示输入错误的灯。
+
+\subsection{文件说明}
+Password文件夹下是串行密码锁的工程文件和代码，
+JieLabVideo文件夹下是在JieLab在线平台上实现的串行密码锁测试的录屏文件。
+
+
+\section{实验结果}
+具体实验结果见JieLabVideo文件夹下的演示视频。仿真时的一张截图如下：
+
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{p1.png}
+        \caption{在线JieLabs仿真截图}
+    \end{figure}
+
+\section{实验总结}
+在本次实验中，我尝试了状态机的设计，为数字逻辑设计课程中的设计
+打下了坚实的理论基础，感谢助教和老师的指教！
+
+
+\bibliographystyle{plain}
+\bibliography{ref} %这里的这个ref就是对文件ref.bib的引用
+
+\end{document}

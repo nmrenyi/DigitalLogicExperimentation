@@ -24,13 +24,25 @@ entity DigitalLife is
 end entity DigitalLife;
 
 architecture bhv of DigitalLife is
+    component complement port (
+        in_signal:in std_logic_vector(3 downto 0):="0000";
+        comple_signal:out std_logic_vector(3 downto 0):="0000"
+    );
+    end component;
     signal natural_seq :std_logic_vector (3 downto 0) := "0000";  -- natural number sequence binary representation, 0-9
     signal natural_seq_hex :std_logic_vector(3 downto 0) := "0000"; -- natural number sequence binary representation, 0-F
     signal odd_seq :std_logic_vector (3 downto 0) := "0001";  -- odd number sequence binary representation
     signal even_seq :std_logic_vector (3 downto 0) := "0000";  -- even number sequence binary representation
     signal clock_cycle :std_logic_vector (31 downto 0) := (others => '0');
+    signal tmp :std_logic_vector(3 downto 0) := "0000"; -- natural number sequence binary representation, 0-F
     
 begin
+    -- p1: complement port map(
+    --     in_signal => natural_seq_hex,
+    --     comple_signal => natural_out_hex
+    -- );
+    natural_out_hex <=  natural_seq_hex;
+    -- natural_out_hex <= tmp;
     process (clock, reset) begin -- sensitive to clock and reset signals
         if (reset = '1') then    -- reset the signals
             natural_seq <= "0000";
@@ -73,7 +85,7 @@ begin
                 odd_out <= odd_seq;
                 even_out<=even_seq;
                 natural_out<=natural_seq;
-                natural_out_hex <= natural_seq_hex;
+                -- natural_out_hex <= (natural_seq_hex);
                 case natural_seq_hex is -- encode the natural seqence to light the LEDS
                     when"0000"=> natural_out_encoded<="1111110"; --0
                     when"0001"=> natural_out_encoded<="0110000"; --1
@@ -125,3 +137,31 @@ begin
 
 
 end architecture bhv;
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity complement is
+    port (
+        -- output ports
+        in_signal: in std_logic_vector(3 downto 0) := "0000";
+        comple_signal: out std_logic_vector(3 downto 0) := "0000"
+    );
+end entity complement;
+
+architecture bhvc of complement is
+    signal mask :std_logic_vector (in_signal'length - 1 downto 0) := (others => '1');
+    
+begin
+    comple_signal <= in_signal;
+-- process(in_signal) begin
+--     if (in_signal(in_signal'length - 1) = '1') then
+--         comple_signal <= in_signal;
+--         -- comple_signal <= (in_signal xor "0000");
+--     else
+--         comple_signal <= in_signal;
+--     end if;
+-- end process;
+
+end architecture bhvc;

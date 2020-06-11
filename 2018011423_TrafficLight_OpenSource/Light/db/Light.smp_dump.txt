@@ -1,0 +1,14 @@
+
+State Machine - |Light|west_state
+Name west_state.start west_state.yel west_state.red west_state.gre 
+west_state.gre 0 0 0 0 
+west_state.red 0 0 1 1 
+west_state.yel 0 1 0 1 
+west_state.start 1 0 0 1 
+
+State Machine - |Light|north_state
+Name north_state.gre north_state.yel north_state.start north_state.red 
+north_state.red 0 0 0 0 
+north_state.start 0 0 1 1 
+north_state.yel 0 1 0 1 
+north_state.gre 1 0 0 1 

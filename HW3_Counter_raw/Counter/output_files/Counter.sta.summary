@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'D_Flip_Flop:u3|Q'
+Slack : -1.724
+TNS   : -4.688
+
+Type  : Setup 'original_clock'
+Slack : -1.719
+TNS   : -6.451
+
+Type  : Hold 'original_clock'
+Slack : -1.512
+TNS   : -2.664
+
+Type  : Hold 'D_Flip_Flop:u3|Q'
+Slack : 1.684
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'original_clock'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'D_Flip_Flop:u3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

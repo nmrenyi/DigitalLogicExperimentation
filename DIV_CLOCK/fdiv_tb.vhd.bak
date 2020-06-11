@@ -1,0 +1,43 @@
+
+
+library IEEE;
+use IEEE.Std_logic_1164.all;
+use IEEE.Numeric_Std.all;
+
+entity fdiv_tb is
+end;
+
+architecture bench of fdiv_tb is
+
+  component fdiv
+    generic(N: integer:=2);
+    port(
+          clkin: IN std_logic;
+          clkout: OUT std_logic
+          );
+  end component;
+
+  signal clkin: std_logic;
+  signal clkout: std_logic ;
+
+  constant clock_period: time := 10 ns;
+  signal stop_the_clock: boolean;
+
+begin
+
+  -- Insert values for generic parameters !!
+  uut: fdiv generic map ( N      =>  )
+               port map ( clkin  => clkin,
+                          clkout => clkout );
+
+
+  clocking: process
+  begin
+    while not stop_the_clock loop
+      clkin <= '0', '1' after clock_period / 2;
+      wait for clock_period;
+    end loop;
+    wait;
+  end process;
+
+end;

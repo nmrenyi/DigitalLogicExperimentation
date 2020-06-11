@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & FranÃ§ois FÃ©votte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[UTF8]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{数字逻辑实验 \\ 计数器设计} % Title of the assignment
+
+\author{姓名:任一  \\学号:2018011423\\ \texttt{ry18@mails.tsinghua.edu.cn}} % Author name and email address
+
+\date{\today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+\lstset{
+    % backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=left, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+}
+
+\begin{document}
+
+\maketitle % Print the title
+\begin{center}
+    \begin{tabular}{l  r}
+    \hline
+
+        \multicolumn{2}{c}{实验环境} \\ \hline
+        操作系统: & Windows10家庭版 18362.72 \\ \hline% Date the experiment was performed
+        QuartusII版本: & Quartus II 13.0 sp1 \\ \hline% Partner names
+
+        ModelSim版本: & Modelsim SE-64 10.7 \\ \hline% Instructor/supervisor
+
+    \end{tabular}
+\end{center}
+\newpage
+
+
+\section{实验概述}
+\subsection{实验思路}
+在本实验中，我实现了计数器设计，并采用了结构化的设计方式。
+设计思路如下：个位的计数采用D触发器实现十进制计数器。
+十位的计数采用D触发器实现6进制计数器。
+同时，D触发器还具有异步清零功能，使得Reset功能得以实现。
+
+对于手动点击的计数器，只需要将CLK信号接到开关上即可使用。
+对于自动的计数器(即秒表)，需要将1MHz的时钟信号做分频，得到1Hz的时钟信号，从而得以实现秒表。
+
+
+\subsection{文件说明}
+Counter文件夹下是计数器的工程文件和代码(包括TestBench文件)，
+JieLabVideo文件夹下是上述手动计数器和自动计数器在JieLab实验平台上仿真的录频文件。
+
+
+\section{实验结果}
+本实验在本地的TestBench测试和线上JieLab平台上的测试都较为顺利，体现了本计数器设计的稳定性和正确性。
+\subsection{Testbench仿真截图}
+\begin{figure}[h]
+    \label{md}
+    \centering
+        \includegraphics[width=0.8\textwidth]{sc1.png}
+        \caption{计数器TestBench仿真}
+    \end{figure}
+    \begin{figure}[h]
+        \label{md}
+        \centering
+            \includegraphics[width=0.8\textwidth]{sc2.png}
+            \caption{计数器TestBench仿真}
+        \end{figure}
+
+\subsection{Jielab在线测试}
+具体内容在JieLabVideo文件夹下，由视频可以看出本计数器很好地完成了实验要求。
+
+\section{实验总结}
+在本次实验中，我体验了结构化设计的方式，感谢老师和助教的悉心指教！
+
+
+\bibliographystyle{plain}
+\bibliography{ref} %这里的这个ref就是对文件ref.bib的引用
+
+\end{document}

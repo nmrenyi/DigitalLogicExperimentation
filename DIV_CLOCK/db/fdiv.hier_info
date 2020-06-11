@@ -1,0 +1,6 @@
+|fdiv
+clkin => temp.CLK
+clkin => cnt.CLK
+clkout <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

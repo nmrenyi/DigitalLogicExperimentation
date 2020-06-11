@@ -1,0 +1,20 @@
+D:/Programs/altera/13.0sp1/HW/DIV_CLOCK/fdiv.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Programs/altera/13.0sp1/HW/DIV_CLOCK/fdiv.vhd
+Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity fdiv
+-- Compiling architecture a of fdiv
+
+} {} {}} D:/Programs/altera/13.0sp1/HW/DIV_CLOCK/fdiv_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/Programs/altera/13.0sp1/HW/DIV_CLOCK/fdiv_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.7 Compiler 2017.12 Dec  7 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fdiv_tb
+-- Compiling architecture bench of fdiv_tb
+
+} {} {}}

@@ -1,0 +1,85 @@
+|Counter
+reset => D_Flip_Flop:u0.clr_n
+reset => D_Flip_Flop:u1.clr_n
+reset => D_Flip_Flop:u2.clr_n
+reset => D_Flip_Flop:u3.clr_n
+reset => D_Flip_Flop_Fall:u4.clr_n
+reset => D_Flip_Flop_Fall:u5.clr_n
+reset => D_Flip_Flop_Fall:u6.clr_n
+reset => D_Flip_Flop_Fall:u7.clr_n
+original_clock => D_Flip_Flop:u0.clock
+original_clock => D_Flip_Flop:u1.clock
+original_clock => D_Flip_Flop:u2.clock
+original_clock => D_Flip_Flop:u3.clock
+natural_out_encoded_0[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_0[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+natural_out_encoded_1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u0
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u1
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u2
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop:u3
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop_Fall:u4
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop_Fall:u5
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop_Fall:u6
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|D_Flip_Flop_Fall:u7
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+clr_n => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

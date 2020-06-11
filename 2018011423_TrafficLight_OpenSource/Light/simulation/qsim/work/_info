@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Tsinghua\2020Spring\DigitalLogicExperiment\Final\Light\simulation\qsim
+vLight
+Z1 I3gXaQkA1O[1fkHgnJ0hUz3
+Z2 VS=9eR=I<^4?]kKFzonFQF3
+Z3 dD:\Tsinghua\2020Spring\DigitalLogicExperiment\Final\Light\simulation\qsim
+Z4 w1591255746
+Z5 8Light.vo
+Z6 FLight.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Light.vo|
+Z9 o-work work -O0
+Z10 n@light
+!i10b 1
+Z11 !s100 WlJEKSkTa>5eaG=iOF_Z31
+!s85 0
+Z12 !s108 1591255748.603000
+Z13 !s107 Light.vo|
+!s101 -O0
+vLight_vlg_check_tst
+!i10b 1
+Z14 !s100 dI88XcC_J45LG1[MDPZ8Y1
+Z15 I9Vm]=TblR>ekUP7=[1UbC3
+Z16 VK=LP3SMhn`;76363h6<ad3
+R3
+Z17 w1591255744
+Z18 8Light.vt
+Z19 FLight.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z20 !s108 1591255748.862000
+Z21 !s107 Light.vt|
+Z22 !s90 -work|work|Light.vt|
+!s101 -O0
+R9
+Z23 n@light_vlg_check_tst
+vLight_vlg_sample_tst
+!i10b 1
+Z24 !s100 zBCaCo6eRl`8KHEc7<;VZ3
+Z25 I:_h`B9mMDKc@O@_mE^G3[0
+Z26 VRb^dKbjCzjWgZSo=8BJS@0
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@light_vlg_sample_tst
+vLight_vlg_vec_tst
+!i10b 1
+Z28 !s100 EFZomU7n<:B3QnJNh2HN33
+Z29 I7D<hYB]9Zch`Y1NlO:QTX3
+Z30 Vd:44n<B1>DeQkgbi3C<fX0
+R3
+R17
+R18
+R19
+Z31 L0 449
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@light_vlg_vec_tst
